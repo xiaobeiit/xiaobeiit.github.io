@@ -97,7 +97,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
@@ -141,7 +141,7 @@ a.md-print-anchor { white-space: pre !important; border-width: initial !importan
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
@@ -561,8 +561,8 @@ g.classGroup line {
 .pieTitleText {
   text-anchor: middle;
   font-size: 25px;
-  fill: #323D47;
-   }
+  fill: #eee;
+}
 
 .slice {
    }
@@ -1761,6 +1761,6 @@ footer.ty-footer {
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h3><a name="软件使用说明书" class="md-header-anchor"></a><span>软件使用说明书</span></h3><p><span>如你所愿，灰度项目、灰度软件始终保持纯免费、无广告、全部开源的初心，哪怕没有任何收益来源。</span></p><p><span>如果你打算支持我们的话，可以通过“灰度:D-企鹅号”找到我，加入我们的付费群聊（35/人）。同时，你将免费获得Pro版及灰度网页版！</span></p><hr /><ul><li><span>肥宅水</span></li></ul><p><span>“肥宅水”可以作为赞赏渠道使用，也可抵扣入群费用。</span></p><p><span>如果愿意请我喝瓶酸奶的话，打赏时记得备注“灰度赞赏”，还有你的QQ号。</span></p><hr /><ul><li><span>拾穗集（灰度Pro单独列出免责声明）</span></li></ul><p><span>免费开放“小北IT”的教程资源，为所有人提供“无差别对待”的技术服务。</span></p><p><span>Why？宁可无偿提供技术，也不想被几百人问这问那。。</span></p><p><span>补充说明：</span></p><p><span>顶部有侧边栏按钮，可以选择分类。如果想回退到顶部，直接按返回键即可（支持手势导航、悬浮球）。</span></p><p><span>一旦发现滥用软件库资源，或有人再发到任何平台（包括QQ群），直接移回小北IT付费群。</span></p><hr /><ul><li><span>呢喃小窝</span></li></ul><p><span>特别鸣谢界面。And，神秘的调试界面。</span></p><ul><li><span>时光信札</span></li></ul><p><span>可以免费阅读一些我写的书稿。</span></p><p><span>如果喜欢的话，可以联系我进付费群以获取全部（包含书稿、插图、配乐、故事集等）。</span></p><ul><li><span>关于我们（灰度Pro中为“引导页”）</span></li></ul><p><span>小北IT各个用户群的介绍及入群条件说明。</span></p><ul><li><span>导航页</span></li></ul><p><span>小北IT官网。记得拜访下我的博客嗷。</span></p><hr /><ul><li><span>领赞叭：免费领名片赞</span></li><li><span>浏览叭：免费领说说浏览量</span></li><li><span>说说叭：免费领说说赞</span></li></ul><p><span>详细教程可参阅：</span><a href='https://xiaobeiit.gitee.io/huidu/android/sygl.html'><span>使用攻略</span></a></p><hr /><p><span>灰度Pro专享：</span></p><ul><li><span>酸酸乳：优质订阅节点及教程</span></li><li><span>影视迷：视频解析接口及教程</span></li><li><span>扩展包：软件库及教程的补充</span></li><li><span>内部开源：软件开发手册及项目结构解读</span></li><li><span>软件库：破解版安卓软件全部出自小北IT</span></li></ul><hr /><p><span>灰度Pro不含以下按钮：</span></p><ul><li><span>敲黑板</span></li></ul><p><span>不要傻乎乎的在领赞网上刷个会员，美名其曰“支持一下”。</span></p><p><span>真打算支持的话，“肥宅水”了解一下？</span></p><ul><li><span>领红包</span></li></ul><p><span>自己人做的，放心去用就是了。</span></p><ul><li><span>致用户</span></li></ul><p><span>So，是哪句话支撑灰度走到了现在？</span></p><p><span>“老子开发的APP，牛掰吧”</span></p><p><span>心塞233……</span></p><ul><li><span>检测更新</span></li></ul><p><span>灰度更新源渠道（</span><a href='https://huidu666.github.io/update.html' target='_blank' class='url'>https://huidu666.github.io/update.html</a><span>)，从做灰度开源项目起，这条链接从未变动！</span></p><p><span>小北IT官方发布的其他灰度下载链接：</span></p><p><a href='https://huidu.xyz/update.html' target='_blank' class='url'>https://huidu.xyz/update.html</a></p><p><a href='https://xiaobeiit.gitee.io/update.html' target='_blank' class='url'>https://xiaobeiit.gitee.io/update.html</a></p><p><span>三条链接指向同一个页面，最后这个加载速度最快。</span></p><p><span>任何QQ群、资源网等平台提供灰度软件，均为偷盗行为，并未获得小北IT的转载许可！</span></p><p><span>灰度Pro仅在领航版群文件提供，禁止外传。</span></p><hr /><p><span>任何Bug均可加Q、加群反馈：</span></p><p><span>灰度作者QQ：1653131174</span></p><p><span>小北IT官方交流群：419813381</span></p><hr /><center>小壮壮/Write</center></div>
+<div  id='write'  class = 'is-node'><h3><a name="软件使用说明书" class="md-header-anchor"></a><span>软件使用说明书</span></h3><hr /><blockquote><p><span>肥宅水</span></p></blockquote><p><span>“肥宅水”里提供了“资源分布图”和收款二维码。</span></p><p><span>请我喝酸奶的话，打赏时记得备注“灰度赞赏”，还有你的QQ号。很快就能在“呢喃小窝”里看到你了。</span></p><p><span>注意：赞助费用不可抵扣入群费用，但可提升“小北IT活跃度”。</span></p><hr /><blockquote><p><span>拾穗集</span></p></blockquote><p><span>免费开放“小北IT”的教程资源，为所有人提供“无差别对待”的技术服务。</span></p><p><span>顶部有侧边栏按钮，可以选择分类。如果想回退到顶部，直接按返回键即可（支持手势导航、悬浮球）。</span></p><p><span>一旦发现滥用、盗用、贩卖，直接移回小北IT付费群。</span></p><hr /><blockquote><p><span>呢喃小窝</span></p></blockquote><p><span>特别鸣谢界面。And，神秘的调试界面。</span></p><blockquote><p><span>时光信札</span></p></blockquote><p><span>这里可以免费读一些我写的书稿。</span></p><p><span>清简版和领航版有全部书稿内容（包含书稿、插图、配乐、故事集等）。</span></p><hr /><blockquote><p><span>领赞叭：免费领取名片赞</span></p><p><span>浏览叭：免费说说浏览量</span></p><p><span>说说叭：免费领取说说赞</span></p></blockquote><ul><li><span>详细教程可参阅：</span><a href='https://xiaobeiit.gitee.io/huidu/android/sygl.html'><span>使用攻略</span></a></li></ul><hr /><p><span>灰度Pro不含：敲黑板、领红包、致用户、检测更新。</span></p><p><span>灰度Pro专享内容详见灰度内的“专业版”按钮。</span></p><hr /><p><span>除灰度项目自身外，任何平台提供灰度软件/源码，均为偷盗行为，并未获得小北IT的转载许可！</span></p><p><span>灰度Pro仅在领航版群文件提供，禁止外传。</span></p><p><span>小北IT官方交流群：419813381</span></p><hr /><center>小壮壮/Write</center><p>&nbsp;</p></div>
 </body>
 </html>
