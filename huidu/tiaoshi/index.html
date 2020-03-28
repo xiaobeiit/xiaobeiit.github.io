@@ -26,11 +26,11 @@ body {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    top: -10%;
+    top: -20%;
 
 }
 
-.input,.tz,.google,.url {
+.input,.search {
     width: 90%;
     font-weight: bold;
     font-size: 1em;
@@ -47,65 +47,23 @@ body {
     background-color: #FFFAFA;
 }
 
-.tz,.google,.url {
+.search {
     color: #fff;
     line-height: 500%;
-}
-.tz{
     background-color: #1E90FF;
 }
-.google {
-    background-color: #BF3EFF;
-}
-.url {
-    background-color: #FF7F00;
-}
     </style>
-    <title>灰度-调试</title>
+    <title>灰度-影视迷</title>
 </head>
 
 <body>
     <div class="content">
         <input type="text" id="text" value="" class="input" />
-        <input type="button" value=" " onclick="tz()" class="tz" />
-        <input type="button" value=" " onclick="google()" class="google" />
-        <input type="button" value=" " onclick="url()" class="url" />
+        <input type="button" value=" " onclick="ge()" class="search" />
         <script type="text/javascript">
-        	var flag = document.getElementById('text');
-
-            function tz() {
-            	if(flag.value.indexOf("https://")>=0){
-                location.href = document.getElementById("text").value;
+            function ge() {
+                location.href = "http://api.3jx.top/vip/?url=" + document.getElementById("text").value;
             }
-            else{
-            	if(flag.value.indexOf("http://")>=0){
-            		location.href = document.getElementById("text").value;}
-            		else{
-            	location.href = "https://www.baidu.com/s?wd=" + document.getElementById("text").value;
-            }}}
-
-            function google() {
-            	if(flag.value.indexOf("https://")>=0){
-                location.href = document.getElementById("text").value;
-            }
-            else{
-            	if(flag.value.indexOf("http://")>=0){
-            		location.href = document.getElementById("text").value;}
-            		else{
-            	location.href = "https://www.google.com.hk/search?safe=strict&q=" + document.getElementById("text").value;
-            }}}
-
-            function url() {
-            	if(flag.value.indexOf("https://")>=0){
-                location.href = document.getElementById("text").value;
-            }
-            else{
-            	if(flag.value.indexOf("http://")>=0){
-            		location.href = document.getElementById("text").value;}
-            		else{
-            	location.href = "https://" + document.getElementById("text").value;
-            }}}
-            
         </script>
     </div>
 </body>
