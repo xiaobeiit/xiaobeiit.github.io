@@ -30,7 +30,7 @@ body {
 
 }
 
-.input,.tz,.baidu,.google {
+.input,.tz,.google,.url {
     width: 90%;
     font-weight: bold;
     font-size: 1em;
@@ -47,20 +47,19 @@ body {
     background-color: #FFFAFA;
 }
 
-.tz,.baidu,.google {
+.tz,.google,.url {
     color: #fff;
     line-height: 500%;
 }
 .tz{
     background-color: #1E90FF;
 }
-.baidu {
-    background-color: #FF7F00;
-}
 .google {
     background-color: #BF3EFF;
 }
-
+.url {
+    background-color: #FF7F00;
+}
     </style>
     <title>灰度-调试</title>
 </head>
@@ -69,17 +68,22 @@ body {
     <div class="content">
         <input type="text" id="text" value="" class="input" />
         <input type="button" value=" " onclick="tz()" class="tz" />
-        <input type="button" value=" " onclick="baidu()" class="baidu" />
         <input type="button" value=" " onclick="google()" class="google" />
+        <input type="button" value=" " onclick="url()" class="url" />
         <script type="text/javascript">
+        	var flag = document.getElementById('text');
             function tz() {
+            	if(flag.value.indexOf("http")>=0){
                 location.href = document.getElementById("text").value;
             }
-            function baidu() {
-                location.href = "https://www.baidu.com/s?wd=" + document.getElementById("text").value;
-            }
+            else{
+            	location.href = "https://www.baidu.com/s?wd=" + document.getElementById("text").value;
+            }}
             function google() {
                 location.href = "https://www.google.com.hk/search?safe=strict&q=" + document.getElementById("text").value;
+            }
+            function url() {
+                location.href = "http://" + document.getElementById("text").value;
             }
         </script>
     </div>
