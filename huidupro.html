@@ -97,7 +97,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
@@ -141,7 +141,7 @@ a.md-print-anchor { white-space: pre !important; border-width: initial !importan
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
@@ -561,8 +561,8 @@ g.classGroup line {
 .pieTitleText {
   text-anchor: middle;
   font-size: 25px;
-  fill: #323D47;
-   }
+  fill: #eee;
+}
 
 .slice {
    }
@@ -1761,10 +1761,6 @@ footer.ty-footer {
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><p><strong><span>灰度Pro特权如下：</span></strong></p><ul><li><span>01.VIP视频解析接口</span></li><li><span>02.优质酸酸乳订阅链接</span></li><li><span>03.解锁小北IT软件库</span></li><li><span>04.软件库&amp;拾穗集的扩展包</span></li><li><span>05.拾穗集不显示免责声明</span></li><li><span>06.灰度项目内部开源</span></li></ul><p><span>注：加入小北IT付费群（35元/人），即可免费获取灰度Pro。</span></p><hr /><p><strong><span>以下注解对应上述内容：</span></strong></p><ul><li><span>01.四个接口均无广告，手机、电脑均可。含教程。</span></li><li><span>02.阿里云200M，香港和新加坡的节点，CN2线路。含教程。</span></li><li><span>03.含90+资源。安卓软件为小北IT独立破解，而非搬运他人破解成品。</span></li><li><span>04.梯子系列，为防滥用，单独提供。</span></li><li><span>05.灰度Pro内单独提供“灰度公约”按钮。</span></li><li><span>06.灰度项目结构解说、灰度项目搭建教程、灰度软件开源手册、购买域名及使用CDN教程。</span></li></ul><hr /><p><strong><span>补充说明：</span></strong></p><p><span>灰度及灰度Pro内的所有网页内容，均源自Github开源项目：</span></p><p><a href='https://github.com/huidu666/huidu666.github.io' target='_blank' class='url'>https://github.com/huidu666/huidu666.github.io</a></p><p><span>该项目同步至Gitee平台：</span></p><p><a href='https://gitee.com/xiaobeiit/xiaobeiit' target='_blank' class='url'>https://gitee.com/xiaobeiit/xiaobeiit</a></p><p><span>并不想支付费用、加入小北IT，或经济能力暂不允许的，可以去灰度项目自己分析各个文件对应的链接。</span></p><p><strong><span>示例：</span></strong></p><p><span>拾穗集页面存储在项目根目录，该HTML的文件名为：shisuiji.html，则链接为：</span></p><p><a href='https://xiaobeiit.gitee.io/shisuiji.html' target='_blank' class='url'>https://xiaobeiit.gitee.io/shisuiji.html</a></p><p><span>请尽量使用Gitee的链接，虽然Github那边绑定了自定义域名和国内的DNS解析商，但速度上还是Gitee的快。</span></p><hr /><p><strong><span>灰度项目组成：</span></strong></p><p><span>Github pages（灰度源项目）</span>
-<span>Gitee   pages（克隆+加速）</span>
-<span>自购域名及服务器（存储CSS等文件）</span>
-<span>百度CDN云加速（加速加载CSS等文件）</span>
-<span>SM.MS图床（存储了灰度90%以上的图片）</span></p><hr /><p><span>感谢所有付费加入小北IT的用户、提供过资金支持的用户，还有对灰度不离不弃的小伙伴。</span></p><center>小北IT</center></div>
+<div  id='write'  class = 'is-node'><p><strong><span>灰度Pro特权如下：</span></strong></p><p><span>小日常：新书预览（极有可能被我写进书里）。</span></p><p><span>软件库、拾穗集，不显示免责声明。</span></p><p><span>软件库&amp;拾穗集的扩展包：</span></p><ol><li><span>小北IT独家系列教程（视频）</span></li><li><span>优质酸酸乳订阅/节点链接</span></li><li><span>Win10专业版密钥及激活工具</span></li><li><span>灰度项目（含灰度软件）开源文档</span></li></ol><hr /><p><span>加入小北IT清简版（35元/人），实人认证后可免费进领航版、获取灰度Pro。</span></p><p><span>对于暂未进行实人认证的灵动版/清简版老用户，我们提供了“灰度Beta”，功能上只比灰度Pro少个“扩展包”。</span></p><p><span>感谢所有付费加入小北IT的用户、提供过资金支持的用户，还有对灰度不离不弃的小伙伴。</span></p><hr /><center>小北IT 宣</center></div>
 </body>
 </html>
