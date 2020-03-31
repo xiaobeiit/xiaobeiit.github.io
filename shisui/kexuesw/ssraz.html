@@ -97,7 +97,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
@@ -141,7 +141,7 @@ a.md-print-anchor { white-space: pre !important; border-width: initial !importan
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
@@ -561,8 +561,8 @@ g.classGroup line {
 .pieTitleText {
   text-anchor: middle;
   font-size: 25px;
-  fill: #323D47;
-   }
+  fill: #eee;
+}
 
 .slice {
    }
@@ -1761,6 +1761,6 @@ footer.ty-footer {
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><p><span>不提倡手机上用SSR，除非有自己付费买的节点。</span></p><p><span>你用老王也好，加了清简版的话，用修改版旋风、pupa都很不错。</span></p><p><span>下边给的节点只是能用而已，速度上别喷，我不欠你什么。</span></p><hr /><p><span>推荐两个SSR节点更新地址，</span><a href='https://lncn.org/'><span>Lncn</span></a><span>、</span><a href='https://www.youneed.win/free-ssr'><span>放牧的风</span></a><span>（点击即可跳转）。默认无法直接访问，需要先挂梯子（比如老王、旋风）。</span></p><p><span>手机支持DNS加密的话，设置后可直接使用Lncn（DNS地址设为dns.rubyfish.cn）。</span></p><p><span>手机设置里搜索DNS就知道支不支持加密了。</span></p><hr /><p><span>先来熟悉下SSR软件界面吧。</span></p><p><span>点击左上角的shadowsocks R，进去后可以添加/删除节点：</span></p><p><img src="https://i.loli.net/2020/02/11/L62IXZySrhemBxw.png" referrerpolicy="no-referrer" alt="SSR001.png"></p><p><span>温馨提示，自己看图叭：</span></p><p><img src="https://i.loli.net/2020/02/11/Y7avhljbt9CIpow.png" referrerpolicy="no-referrer" alt="SSR002.png"></p><p><span>点击右下角加号后，可以看到“从剪切板导入”：</span></p><p><img src="https://i.loli.net/2020/02/11/utpOjVwqUWINTas.png" referrerpolicy="no-referrer" alt="SSR003.png"></p><p><span>节点怎么获取？</span></p><p><span>先挂个梯子：</span></p><p><img src="https://i.loli.net/2020/02/11/QjcBiz2IwnVk4ZE.png" referrerpolicy="no-referrer" alt="SSR004.png"></p><p><span>灰度自带“技能”，小飞机，够贴心吧：</span></p><p><img src="https://i.loli.net/2020/02/11/SvdKcOzowG1uDEX.png" referrerpolicy="no-referrer" alt="SSR005.png"></p><p><span>以Lncn为例，推荐用东京的节点（点击SSR按钮即可复制节点）：</span></p><p><img src="https://i.loli.net/2020/02/11/wLas89q7fZ4TSYt.png" referrerpolicy="no-referrer" alt="SSR006.png"></p><p><span>然后呢，回到SSR，“从剪切板导入”即可：</span></p><p><img src="https://i.loli.net/2020/02/11/i8Od9AZoyjMVpHr.png" referrerpolicy="no-referrer" alt="SSR007.png"></p><p><span>导入后，点击新导入的节点：</span></p><p><img src="https://i.loli.net/2020/02/11/RmPLrQwgux5eDHq.png" referrerpolicy="no-referrer" alt="SSR008.png"></p><p><span>记得改代理模式，改成“绕过局域网和大陆”（“功能设置”-&gt;“路由”）。</span></p><p><span>然后点击右上角的小飞机按钮：</span></p><p><img src="https://i.loli.net/2020/02/11/O4lbjPdyoNv7xRS.png" referrerpolicy="no-referrer" alt="SSR009.png"></p><p><span>然后就可以用了。这里就不放测试图了，没啥意义。</span></p><p><span>教程到此结束。</span></p><hr /><center>小壮壮/Write</center></div>
+<div  id='write'  class = 'is-node'><p><span>酸酸乳（SSR），干嘛用的？突破网络封锁，访问外国网站/软件。</span></p><p><span>SSR软件自身并不提供节点，需要从外部获取、导入进来。</span></p><hr /><p><span>这里有两个SSR节点更新地址，</span><a href='https://lncn.org/'><span>Lncn</span></a><span>、</span><a href='https://www.youneed.win/free-ssr'><span>放牧的风</span></a><span>（点击即可跳转）。默认无法直接访问，解决办法有很多，不在这里浪费口舌。</span></p><p><span>上边给的节点只是能用而已，速度上别喷。而且每天都要进网站获取节点，逼疯人的节奏。</span></p><p><span>这个教程只是为了教学啊，对吧（手动滑稽）。</span></p><p><span>领航版的灰度Pro里，提供了两个优质节点平台。懂我意思吧？</span></p><hr /><p><span>先来熟悉下SSR软件界面吧。</span></p><p><span>点击左上角的shadowsocks R，进去后可以添加/删除节点：</span></p><p><img src="https://i.loli.net/2020/02/11/L62IXZySrhemBxw.png" referrerpolicy="no-referrer" alt="SSR001.png"></p><p><span>温馨提示，自己看图叭：</span></p><p><img src="https://i.loli.net/2020/02/11/Y7avhljbt9CIpow.png" referrerpolicy="no-referrer" alt="SSR002.png"></p><p><span>点击右下角加号后，可以看到“从剪切板导入”：</span></p><p><img src="https://i.loli.net/2020/02/11/utpOjVwqUWINTas.png" referrerpolicy="no-referrer" alt="SSR003.png"></p><p><span>节点怎么获取？</span></p><p><span>以Lncn为例，用东京的节点（点击SSR按钮即可复制节点）：</span></p><p><img src="https://i.loli.net/2020/02/11/wLas89q7fZ4TSYt.png" referrerpolicy="no-referrer" alt="SSR006.png"></p><p><span>然后呢，回到SSR，“从剪切板导入”即可：</span></p><p><img src="https://i.loli.net/2020/02/11/i8Od9AZoyjMVpHr.png" referrerpolicy="no-referrer" alt="SSR007.png"></p><p><span>导入后，点击新导入的节点：</span></p><p><img src="https://i.loli.net/2020/02/11/RmPLrQwgux5eDHq.png" referrerpolicy="no-referrer" alt="SSR008.png"></p><p><span>记得改代理模式，改成“绕过局域网和大陆”（“功能设置”-&gt;“路由”）。</span></p><p><span>然后点击右上角的小飞机按钮：</span></p><p><img src="https://i.loli.net/2020/02/11/O4lbjPdyoNv7xRS.png" referrerpolicy="no-referrer" alt="SSR009.png"></p><p><span>然后就可以用了。这里就不放测试图了，没啥意义。</span></p><p><span>教程到此结束。</span></p><hr /><center>小壮壮/Write</center></div>
 </body>
 </html>
