@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>解析接口使用教程</title><link href='file://night/mermaid.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/codeblock.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/sourcemode.dark.css' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>灰度-影视迷使用教程</title><link href='file://night/mermaid.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/codeblock.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/sourcemode.dark.css' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
@@ -97,7 +97,7 @@ p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
 .md-math-block:not(:empty)::after { display: none; }
-[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: 0px; box-shadow: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
 .md-task-list-item { position: relative; list-style-type: none; }
 .task-list-item.md-task-list-item { padding-left: 0px; }
 .md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
@@ -141,7 +141,7 @@ a.md-print-anchor { white-space: pre !important; border-width: initial !importan
 .MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
 .md-diagram-panel > svg { max-width: 100%; }
-[lang="mermaid"] svg, [lang="flow"] svg { max-width: 100%; height: auto; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
 [lang="mermaid"] .node text { font-size: 1rem; }
 table tr th { border-bottom: 0px; }
 video { max-width: 100%; display: block; margin: 0px auto; }
@@ -561,8 +561,8 @@ g.classGroup line {
 .pieTitleText {
   text-anchor: middle;
   font-size: 25px;
-  fill: #323D47;
-   }
+  fill: #eee;
+}
 
 .slice {
    }
@@ -1036,12 +1036,12 @@ audio:not([controls]) {
 
 ul,
 ol {
-    padding: 0 0 0 1.875rem;
+    padding: 0 0 0 1rem;
     /* 30px */
 }
 
 ul {
-    list-style: square;
+    list-style: disc;
 }
 
 ol {
@@ -1070,10 +1070,10 @@ cite {
 }
 
 blockquote {
-    padding-left: 1.875rem;
-    margin: 0 0 1.875rem 1.875rem;
+    padding-left: 0rem;
+    margin: 0 0 1.875rem 0rem;
     border-left: solid 2px #474d54;
-    padding-left: 30px;
+    padding-left: 15px;
     margin-top: 35px;
 }
 
@@ -1761,8 +1761,8 @@ footer.ty-footer {
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><h3><a name="解析接口使用教程" class="md-header-anchor"></a><span>解析接口使用教程</span></h3><p><span>前言：</span></p><p><span>0X01和0X02是基础。</span>
-<span>AX01、AX02是用QQ/微信看。</span>
-<span>BX01是用浏览器看。</span></p><hr /><ul><li><span>0X01获取接口</span></li></ul><p><span>提供四个接口，没广告，有一个能用就行：</span></p><p><a href='http://api.3jx.top/vip/?url=' target='_blank' class='url'>http://api.3jx.top/vip/?url=</a></p><p><a href='http://api.mk25.cn/vip/?url=' target='_blank' class='url'>http://api.mk25.cn/vip/?url=</a></p><p><a href='https://api.jiexi.la/?url=' target='_blank' class='url'>https://api.jiexi.la/?url=</a></p><p><a href='https://www.wggvip.com/jiexi/?v=' target='_blank' class='url'>https://www.wggvip.com/jiexi/?v=</a></p><hr /><ul><li><span>0X02保存接口</span></li></ul><p><span>待会要拼接链接，一种是在浏览器的地址栏完成，一种是在QQ/微信的聊天框完成。</span></p><p><span>个人建议是你学一下怎样使用输入法的常用语，不需要每次都复制粘贴上边的接口。用起来就像表情包，点一下就出来了。</span></p><p><span>总之，使用输入法的“剪切板”，并不是明智的选择。存到备忘录，更麻烦。看你个人能力吧，什么都不学，永远都不会。</span></p><hr /><ul><li><span>AX01获取视频链接</span></li></ul><p><span>直接用微信/QQ的聊天框，把xiaobeiit.cn发给自己。</span></p><p><span>以QQ为例，示例图：</span></p><p><img src="https://i.loli.net/2020/02/13/hbWoutgG5HnlJMp.jpg" referrerpolicy="no-referrer" alt="影视迷02.jpg"></p><p><span>以“爱奇艺”为例，比如我想看《叶问4》，进入播放页面，然后点击右上角的菜单键，会有个“复制链接”：</span></p><p><img src="https://i.loli.net/2020/02/13/MLYHqZznt542Jrb.jpg" referrerpolicy="no-referrer" alt="影视迷03.jpg"></p><p><span>这是叶问4的爱奇艺链接：</span></p><p><a href='https://m.iqiyi.com/v_19rrc1di2c.html' target='_blank' class='url'>https://m.iqiyi.com/v_19rrc1di2c.html</a></p><hr /><ul><li><span>AX02拼接链接</span></li></ul><p><span>在视频链接的前边，加上我给你的解析接口，就可以了，也就是：</span></p><p><a href='http://api.3jx.top/vip/?url=https://m.iqiyi.com/v_19rrc1di2c.html' target='_blank' class='url'>http://api.3jx.top/vip/?url=https://m.iqiyi.com/v_19rrc1di2c.html</a></p><p><span>发到QQ里直接播放（可以全屏什么的，用的是腾讯X5内核）：</span></p><p><img src="https://i.loli.net/2020/02/13/fJSWvXyrsjoKpMi.jpg" referrerpolicy="no-referrer" alt="影视迷04.jpg"></p><p><span>注：注意接口的结尾，等号后边，不能有空格，更不可以换行。</span></p><hr /><ul><li><span>BX01也可用浏览器播放</span></li></ul><p><span>下边我说的可能比较复杂，看你理解能力了：</span></p><p><span>浏览器主页设置为xiaobeiit.cn。打开浏览器即可直接进爱奇艺搜索电影，进入播放页，在地址栏起始位置插入解析接口，跳转即可播放。</span></p><p><span>使用备用接口播放（via浏览器）：</span></p><p><img src="https://i.loli.net/2020/02/13/4cM7ozVhHkZFECU.jpg" referrerpolicy="no-referrer" alt="影视迷05.jpg"></p><p><span>进入全屏播放后，还可以下载视频：</span></p><p><img src="https://i.loli.net/2020/02/13/InTbjDz5sWtqmPL.jpg" referrerpolicy="no-referrer" alt="影视迷06.jpg"></p><p><span>个人比较推荐这种。但为什么不能直接在灰度里播放视频？</span></p><p><span>那样的话，是不是还要加入书签功能、历史记录呢？</span></p><p><span>灰度不是浏览器、影视软件，那样只会让它变得臃肿。</span></p><hr /><p align="center">小壮壮/Write</p></div>
+<div  id='write'  class = 'is-node'><p><strong><span>“灰度-影视迷”使用教程</span></strong></p><p><span>安卓手机上用灰度的话，优先级：Pro&gt;Beta&gt;普通版。</span></p><p><span>选优先级最高的就是了，不是都要去安装：</span></p><ul><li><span>概念版群文件提供“灰度”</span></li><li><span>灵动版群文件提供“灰度Beta”</span></li><li><span>领航版群文件提供“灰度Pro”</span></li></ul><p><span>苹果/电脑上用的话，直接用灰度网页版-影视迷。</span></p><hr /><p><span>很多人吐槽找爱奇艺、腾讯视频的视频链接，很麻烦。或许你还没用过小北IT官网/灰度网页版。去看概念版群公告吧。</span></p><p><span>影视迷-视频教程：</span></p><video id="video" controls="" preload="none" poster="https://xiaobeiit.gitee.io/videoicon.png">
+      <source id="mp4" src="https://xiaobeiit.gitee.io/src/shisui/shipinxg/movieysm.mp4" type="video/mp4">
+      </video><hr /><p><span>写给爱好网页设计的小伙伴：</span></p><p><span>影视迷这个页面，并没有多少技术含量。我挑了一个比较好用的视频接口，做成了影视迷。就这么简单。</span></p><p><span>一共有四个接口，没广告，有一个能用就行：</span></p><ul><li><a href='http://api.3jx.top/vip/?url=' target='_blank' class='url'>http://api.3jx.top/vip/?url=</a></li><li><a href='http://api.mk25.cn/vip/?url=' target='_blank' class='url'>http://api.mk25.cn/vip/?url=</a></li><li><a href='https://api.jiexi.la/?url=' target='_blank' class='url'>https://api.jiexi.la/?url=</a></li><li><a href='https://www.wggvip.com/jiexi/?v=' target='_blank' class='url'>https://www.wggvip.com/jiexi/?v=</a></li></ul><hr /><p><span>写在最后：</span></p><p><span>如果你喜欢灰度-影视迷的话，可以邀请更多的小伙伴加入小北IT大家庭，一起使用灰度。</span></p><p><span>如果你不介意的话，可以请我喝瓶酸奶，谢谢。</span></p><p><img src="https://xiaobeiit.gitee.io/Reward.png" referrerpolicy="no-referrer" alt="收款码"></p><hr /><center>小壮壮/Write</center><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p></div>
 </body>
 </html>
