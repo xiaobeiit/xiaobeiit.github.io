@@ -26,45 +26,66 @@ body {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    top: -20%;
+    top: -15%;
 
 }
 
-.input,.search {
+.input,.jkone,.jktwo,.jkthree {
     width: 90%;
     font-weight: bold;
     font-size: 1em;
     border: 0px;
     border-color: #282828;
     border-radius: 35px;
-    margin: 10px;
+    margin: 8px;
 }
 
 .input {
     color: #000000;
     text-align: center;
-    line-height: 500%;
+    line-height: 400%;
     background-color: #FFFAFA;
 }
 
-.search {
+.jkone,.jktwo,.jkthree {
     color: #fff;
-    line-height: 500%;
+    line-height: 400%;
+}
+.jkone {
     background-color: #1E90FF;
 }
+.jktwo {
+    background-color: #66CD00;
+}
+.jkthree {
+    background-color: #FF7F00;
+}
     </style>
-    <title>灰度-影视迷</title>
+    <title>影视迷</title>
     <link rel="shortcut icon" href="https://xiaobeiit.com/img/huidu/logo.png" />
 </head>
 
 <body>
     <div class="content">
         <input type="text" id="text" value="" class="input" />
-        <input type="button" value=" " onclick="ge()" class="search" />
+        <input type="button" value=" " onclick="jkone()" class="jkone" />
+        <input type="button" value=" " onclick="jktwo()" class="jktwo" />
+        <input type="button" value=" " onclick="jkthree()" class="jkthree" />
         <script type="text/javascript">
-            function ge() {
-                location.href = "http://api.3jx.top/vip/?url=" + document.getElementById("text").value;
+        	var flag = document.getElementById('text');
+
+            function jkone() {
+            	location.href = "http://jsap.attakids.com/?url=" + document.getElementById("text").value;
             }
+
+            function jktwo() {
+            	location.href = "http://jx.618g.com/?url=" + document.getElementById("text").value;
+            }
+
+            function jkthree() {
+            	location.href = "https://z1.m1907.cn?jx=" + document.getElementById("text").value;
+            }
+            
         </script>
     </div>
 </body>
