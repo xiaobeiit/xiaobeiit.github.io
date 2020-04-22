@@ -201,24 +201,6 @@
                     </div>
                 </footer>
                 <script>
-                    var oMenu = document.getElementById('menu');
-                    var oBtn = oMenu.getElementsByTagName('a')[0];
-                    var oLeftBar = document.getElementById('leftBar');
-                    oBtn.onclick = function() {
-                        if (oLeftBar.offsetLeft == 0) {
-                            oLeftBar.style.left = -249 + 'px';
-                        } else {
-                            oLeftBar.style.left = 0 + 'px';
-                        }
-                        if (document.documentElement.clientWidth <= 481) {
-                            document.onclick = function() {
-                                if (oLeftBar.offsetLeft == 0) {
-                                    console.log(123);
-                                    oLeftBar.style.left = -249 + 'px';
-                                }
-                            }
-                        }
-                    }
                     var oNavItem = document.getElementById('navItem');
                     var aA = oNavItem.getElementsByTagName('a');
                     for (var i = 0; i < aA.length; i++) {
