@@ -30,7 +30,7 @@
     color: #000000;
     text-align: center;
     line-height: 360%;
-    background-color: #F5F5F5;
+    background-image: linear-gradient(to left, #BDBBBE 0%, #9D9EA3 100%), radial-gradient(88% 271%, rgba(255, 255, 255, 0.25) 0%, rgba(254, 254, 254, 0.25) 1%, rgba(0, 0, 0, 0.25) 100%), radial-gradient(50% 100%, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%); background-blend-mode: normal, lighten, soft-light;
 }
 
 #mainDiv > input {
@@ -127,7 +127,7 @@
                 return _this;
             }
         }
-        var color = new gradientColor('#999AAA', '#424242', apis.length * 1.5);
+        var color = new gradientColor('#777777', '#444444', apis.length * 1.5);
         var maindiv = document.getElementById("mainDiv");
         var tmp, a = 0;
         for (var i = 0; i < apis.length; i++) {
