@@ -12,8 +12,8 @@
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #282828;
     text-align: center;
+    background-color: #282828;
 }
 
 .content {
@@ -21,84 +21,75 @@
     margin: 0 auto;
 }
 
-.input,.tz,.google,.url {
-    width: 90%;
-    font-weight: bold;
-    font-size: 1em;
-    border: 0px;
-    border-color: #282828;
+.input,.google,.baidu,.jump {
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
     border-radius: 35px;
-    margin: 8px;
+    border-color: #BEBEBE;
+    text-align: center;
+    line-height: 360%;
+    font-size: 1em;
+    color: #C2C6C6;
+    outline: 0;
+    width: 80%;
+    margin: 10px;
 }
 
 .input {
-    color: #000000;
-    text-align: center;
-    line-height: 400%;
-    background-color: #FFFAFA;
-}
-
-.tz,.google,.url {
-    color: #fff;
-    line-height: 400%;
-}
-.tz{
-    background-color: #1E90FF;
-}
-.google {
-    background-color: #66CD00;
-}
-.url {
-    background-color: #FF7F00;
+    font-weight: bold;
 }
     </style>
     <title>极简搜索</title>
-    <link rel="shortcut icon" href="https://xiaobeiit.com/img/huidu/logo.png" />
+    <link rel="shortcut icon" href="videoicon.png">
 </head>
 
 <body>
     <div class="content">
-        <br><br>
+        <br>
+        <br>
         <input type="text" id="text" value="" class="input" />
-        <input type="button" value=" " onclick="tz()" class="tz" />
-        <input type="button" value=" " onclick="google()" class="google" />
-        <input type="button" value=" " onclick="url()" class="url" />
+        <input type="button" value="Google" onclick="google()" class="google" />
+        <input type="button" value="BaiDu" onclick="baidu()" class="baidu" />
+        <input type="button" value="Jump" onclick="url()" class="jump" />
         <script type="text/javascript">
-        	var flag = document.getElementById('text');
-
-            function tz() {
-            	if(flag.value.indexOf("https://")>=0){
-                location.href = document.getElementById("text").value;
-            }
-            else{
-            	if(flag.value.indexOf("http://")>=0){
-            		location.href = document.getElementById("text").value;}
-            		else{
-            	location.href = "https://www.baidu.com/s?wd=" + document.getElementById("text").value;
-            }}}
+            var flag = document.getElementById('text');
 
             function google() {
-            	if(flag.value.indexOf("https://")>=0){
-                location.href = document.getElementById("text").value;
+                if (flag.value.indexOf("https://") >= 0) {
+                    location.href = document.getElementById("text").value;
+                } else {
+                    if (flag.value.indexOf("http://") >= 0) {
+                        location.href = document.getElementById("text").value;
+                    } else {
+                        location.href = "https://www.google.com.hk/search?safe=strict&q=" + document.getElementById("text").value;
+                    }
+                }
             }
-            else{
-            	if(flag.value.indexOf("http://")>=0){
-            		location.href = document.getElementById("text").value;}
-            		else{
-            	location.href = "https://www.google.com.hk/search?safe=strict&q=" + document.getElementById("text").value;
-            }}}
+
+            function baidu() {
+                if (flag.value.indexOf("https://") >= 0) {
+                    location.href = document.getElementById("text").value;
+                } else {
+                    if (flag.value.indexOf("http://") >= 0) {
+                        location.href = document.getElementById("text").value;
+                    } else {
+                        location.href = "https://www.baidu.com/s?wd=" + document.getElementById("text").value;
+                    }
+                }
+            }
 
             function url() {
-            	if(flag.value.indexOf("https://")>=0){
-                location.href = document.getElementById("text").value;
+                if (flag.value.indexOf("https://") >= 0) {
+                    location.href = document.getElementById("text").value;
+                } else {
+                    if (flag.value.indexOf("http://") >= 0) {
+                        location.href = document.getElementById("text").value;
+                    } else {
+                        location.href = "https://" + document.getElementById("text").value;
+                    }
+                }
             }
-            else{
-            	if(flag.value.indexOf("http://")>=0){
-            		location.href = document.getElementById("text").value;}
-            		else{
-            	location.href = "https://" + document.getElementById("text").value;
-            }}}
-            
         </script>
     </div>
 </body>
