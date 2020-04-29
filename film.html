@@ -17,28 +17,28 @@
 }
 
 .input,#mainDiv > input {
+    background-color: transparent;
     font-weight: bold;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-style: solid;
+    text-align: center;
+    color: #000000;
     font-size: 1em;
-    border: 0px;
     outline: 0;
 }
 
 .input {
-    width: 82%;
-    border-radius: 35px;
     margin: 20px;
-    color: #000000;
-    text-align: center;
+    width: 82%;
     line-height: 360%;
-    background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255,255,255,0.50) 47%, rgba(0,0,0,0.50) 100%);
-    background-blend-mode: screen;
+    border-radius: 35px;
 }
 
 #mainDiv > input {
     margin: 5px 5px 5px 5px;
-    color: #a1c4fd;
     width: 20%;
-    line-height: 360%;
+    line-height: 400%;
     border-radius: 15px;
 }
     </style>
@@ -55,85 +55,11 @@
     </div>
     <script>
         var apis = ["http://jsap.attakids.com/?url=", "http://jx.618g.com/?url=", "https://z1.m1907.cn?jx=", "http://www.ckmov.com/?url=", "https://m.iqiyi.com/search.html?key=", "http://m.v.qq.com/search.html?keyWord=", "https://search.youku.com/search_video?keyword=", "https://m.mgtv.com/so/?k=", "https://so.iqiyi.com/so/", "https://v.qq.com/x/search/?q=", "https://so.youku.com/search_video/q_", "https://so.mgtv.com/so?k="];
-
-        function gradientColor(startColor, endColor, step) {
-            startRGB = this.colorRgb(startColor);
-            startR = startRGB[0];
-            startG = startRGB[1];
-            startB = startRGB[2];
-            endRGB = this.colorRgb(endColor);
-            endR = endRGB[0];
-            endG = endRGB[1];
-            endB = endRGB[2];
-            sR = (endR - startR) / step;
-            sG = (endG - startG) / step;
-            sB = (endB - startB) / step;
-            var colorArr = [];
-            for (var i = 0; i < step; i++) {
-                var hex = this.colorHex('rgb(' + parseInt((sR * i + startR)) + ',' + parseInt((sG * i + startG)) + ',' + parseInt((sB * i + startB)) + ')');
-                colorArr.push(hex);
-            }
-            return colorArr;
-        }
-        gradientColor.prototype.colorRgb = function(sColor) {
-            var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-            var sColor = sColor.toLowerCase();
-            if (sColor && reg.test(sColor)) {
-                if (sColor.length === 4) {
-                    var sColorNew = "#";
-                    for (var i = 1; i < 4; i += 1) {
-                        sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
-                    }
-                    sColor = sColorNew;
-                }
-                var sColorChange = [];
-                for (var i = 1; i < 7; i += 2) {
-                    sColorChange.push(parseInt("0x" + sColor.slice(i, i + 2)));
-                }
-                return sColorChange;
-            } else {
-                return sColor;
-            }
-        };
-        gradientColor.prototype.colorHex = function(rgb) {
-            var _this = rgb;
-            var reg = /^#([0-9a-fA-f]{3}|[0-9a-fA-f]{6})$/;
-            if (/^(rgb|RGB)/.test(_this)) {
-                var aColor = _this.replace(/(?:(|)|rgb|RGB)*/g, "").split(",");
-                var strHex = "#";
-                for (var i = 0; i < aColor.length; i++) {
-                    var hex = Number(aColor[i]).toString(16);
-                    hex = hex < 10 ? 0 + '' + hex : hex;
-                    if (hex === "0") {
-                        hex += hex;
-                    }
-                    strHex += hex;
-                }
-                if (strHex.length !== 7) {
-                    strHex = _this;
-                }
-                return strHex;
-            } else if (reg.test(_this)) {
-                var aNum = _this.replace(/#/, "").split("");
-                if (aNum.length === 6) {
-                    return _this;
-                } else if (aNum.length === 3) {
-                    var numHex = "#";
-                    for (var i = 0; i < aNum.length; i += 1) {
-                        numHex += (aNum[i] + aNum[i]);
-                    }
-                    return numHex;
-                }
-            } else {
-                return _this;
-            }
-        }
-        var color = new gradientColor('#e6e9f0', '#eef1f5', apis.length * 1.5);
         var maindiv = document.getElementById("mainDiv");
-        var tmp, a = 0;
+        var tmp;
         for (var i = 0; i < apis.length; i++) {
             tmp = document.createElement("input");
-            tmp.style = "background: linear-gradient(" + color[a++] + ", " + color[a - 1 + apis.length / 2] + ");";
+            tmp.classList.add("jk" + (i % 4 + 1));
             tmp.type = "button";
             maindiv.appendChild(tmp);
         }
