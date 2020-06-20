@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keywords" content="小北IT,玩机,灰度,灰度开源项目,软件库,拾穗集,还你干净的世界" />
+    <meta name="description" content="灰度网页版，轻奢，极简，悦享，还你干净的世界" />
+    <title>灰度-网页版</title>
+    <link rel="shortcut icon" href="videoicon.png">
+    <link rel="stylesheet" href="css/huidujuhe.css" media="screen" type="text/css" />
+</head>
+
+<body>
+    <div class='container'>
+        <div>
+            <input type="text" id="text" value="" class="input">
+        </div>
+        <div>
+            <div class='btn red center' onclick='ysa()'>iQiYi</div>
+            <div class='btn dark center' onclick='ysb()'>Tengx</div>
+            <div class='btn light center' onclick='ysc()'>YouKu</div>
+            <div class='btn green center' onclick='ysd()'>Mango</div>
+            <div class='btn blue center' onclick='jka()'>Line A</div>
+        </div>
+        <div>
+            <div class='btn dark center' onclick='tla()'>Duan</div>
+            <div class='btn light center' onclick='tlb()'>LanZou</div>
+            <div class='btn green center' onclick='tlc()'>KuaiDi</div>
+            <div class='btn blue center' onclick='tld()'>La Ji</div>
+            <div class='btn red center' onclick='jkb()'>Line B</div>
+        </div>
+        <div>
+            <div class='btn light center' onclick='yya()'>Mi Gu</div>
+            <div class='btn green center' onclick='yyb()'>Qmusic</div>
+            <div class='btn blue center' onclick='yyc()'>YunCun</div>
+            <div class='btn red center' onclick='hui()'>Hui Du</div>
+            <div class='btn dark center' onclick='jkc()'>Line C</div>
+        </div>
+        <div>
+            <textarea class="textarea" rows="11"></textarea>
+        </div>
+    </div>
+    <div style="text-align:center;clear:both">
+        <script type="text/javascript" color="0,0,0" opacity='0.5' zIndex="-2" count="50" src="js/canvas-nest.js"></script>
+        <script type="text/javascript">
+            var flag = document.getElementById('text');
+
+            function ysa() {
+                window.open("https://so.iqiyi.com/so/" + flag.value, '_blank');
+            }
+
+            function ysb() {
+                window.open("https://v.qq.com/x/search/?q=" + flag.value, '_blank');
+            }
+
+            function ysc() {
+                window.open("https://so.youku.com/search_video/q_" + flag.value, '_blank');
+            }
+
+            function ysd() {
+                window.open("https://so.mgtv.com/so?k=" + flag.value, '_blank');
+            }
+
+            function jka() {
+                window.open("https://jsap.attakids.com/?url=" + flag.value, '_blank');
+            }
+
+            function jkb() {
+                window.open("https://vip.52jiexi.top/?url=" + flag.value, '_blank');
+            }
+
+            function jkc() {
+                window.open("https://jx.elwtc.com/vip/?url=" + flag.value, '_blank');
+            }
+
+            function tla() {
+                var ajaxObj = new XMLHttpRequest();
+                var suoUrl = "https://xiaobeiit.cn/api/ys.php?url=" + flag.value;
+                ajaxObj.open('get', suoUrl);
+                ajaxObj.send();
+                ajaxObj.onreadystatechange = function() {
+                    if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
+                        document.querySelector('textarea').innerHTML = ajaxObj.responseText;
+                    }
+                }
+            }
+
+            function tlb() {
+                var ajaxObj = new XMLHttpRequest();
+                var dwurl = flag.value.toString().substring(flag.value.toString().lastIndexOf("\/") + 1, flag.value.toString().length);
+                var suoUrl = "https://xiaobeiit.cn/lanzou/?url=" + dwurl;
+                ajaxObj.open('get', suoUrl);
+                ajaxObj.send();
+                ajaxObj.onreadystatechange = function() {
+                    if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
+                        var result = JSON.parse(ajaxObj.responseText);
+                        var nameStr = result.text.name;
+                        var sizeStr = result.text.size;
+                        var timeStr = result.text.time;
+                        var lanDw = result.down.url_dom;
+                        var endStr = suoUrl + "\n" + "\n" + "File Name : " + nameStr + "\n" + "\n" + "Share Time : " + timeStr + "\n" + "\n" + "File Size : " + sizeStr;
+                        document.querySelector('textarea').innerHTML = endStr;
+                        location.href = lanDw;
+                    }
+                }
+            }
+
+            function tlc() {
+                var ajaxObj = new XMLHttpRequest();
+                var kuaiUrl = "https://api.vvhan.com/api/kuaidi?hao=" + flag.value;
+                ajaxObj.open('get', kuaiUrl);
+                ajaxObj.send();
+                ajaxObj.onreadystatechange = function() {
+                    if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
+                        var result = JSON.parse(ajaxObj.responseText);
+                        var gsStr = result.company;
+                        var ztStr = result.status;
+                        var conStr = result.info[0].context;
+                        var timeStr = result.info[0].time;
+                        var endStr = conStr + "\n" + "\n" + timeStr + "\n" + "\n" + gsStr + " - " + ztStr;
+                        document.querySelector('textarea').innerHTML = endStr;
+                    }
+                }
+            }
+
+            function tld() {
+                var ajaxObj = new XMLHttpRequest();
+                var lajiUrl = "https://xiaobeiit.cn/api/lj.php?q=" + flag.value;
+                ajaxObj.open('get', lajiUrl);
+                ajaxObj.send();
+                ajaxObj.onreadystatechange = function() {
+                    if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
+                        var result = JSON.parse(ajaxObj.responseText);
+                        var flStr = result.data.waste_type;
+                        var endStr = flStr + "\n" + "\n" + flag.value;
+                        document.querySelector('textarea').innerHTML = endStr;
+                    }
+                }
+            }
+
+            function yya() {
+                var ajaxObj = new XMLHttpRequest();
+                var miguUrl = "https://xiaobeiit.cn/api/migusc.php?key=" + flag.value;
+                ajaxObj.open('get', miguUrl);
+                ajaxObj.send();
+                ajaxObj.onreadystatechange = function() {
+                    if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
+                        var result = JSON.parse(ajaxObj.responseText);
+                        var id = result.data.list[0].id;
+                        var mcStr = result.data.list[0].name;
+                        var gsStr = result.data.list[0].artists[0].name;
+                        var endStr = gsStr + "-" + mcStr + "\n" + "\n" + mcStr + "-" + gsStr;
+                        document.querySelector('textarea').innerHTML = endStr;
+                        var ajaxObk = new XMLHttpRequest();
+                        var mfUrl = "https://xiaobeiit.cn/api/migudw.php?id=" + id;
+                        ajaxObk.open('get', mfUrl);
+                        ajaxObk.send();
+                        ajaxObk.onreadystatechange = function() {
+                            if (ajaxObk.readyState == 4 && ajaxObk.status == 200) {
+                                var res = JSON.parse(ajaxObk.responseText);
+                                var dwUrl = res.data.url;
+                                location.href = dwUrl;
+                            }
+                        }
+                    }
+                }
+            }
+
+            function yyb() {
+                var ajaxObj = new XMLHttpRequest();
+                var qieUrl = "https://xiaobeiit.cn/api/qiesc.php?key=" + flag.value;
+                ajaxObj.open('get', qieUrl);
+                ajaxObj.send();
+                ajaxObj.onreadystatechange = function() {
+                    if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
+                        var result = JSON.parse(ajaxObj.responseText);
+                        var id = result.data.list[0].songmid;
+                        var mcStr = result.data.list[0].songname;
+                        var gsStr = result.data.list[0].singer[0].name;
+                        var endStr = gsStr + "-" + mcStr + "\n" + "\n" + mcStr + "-" + gsStr;
+                        document.querySelector('textarea').innerHTML = endStr;
+                        var ajaxObk = new XMLHttpRequest();
+                        var qfUrl = "https://xiaobeiit.cn/api/qiedw.php?id=" + id + "&type=flac";
+                        ajaxObk.open('get', qfUrl);
+                        ajaxObk.send();
+                        ajaxObk.onreadystatechange = function() {
+                            if (ajaxObk.readyState == 4 && ajaxObk.status == 200) {
+                                var res = JSON.parse(ajaxObk.responseText);
+                                var dwUrl = res.data;
+                                location.href = dwUrl;
+                            }
+                        }
+                    }
+                }
+            }
+
+            function yyc() {
+                window.open("http://tool.liumingye.cn/music/?page=audioPage&type=YQD&name=" + flag.value, '_blank');
+            }
+
+            function hui() {
+                window.open("https://xiaobeiit.gitee.io/web.html", '_blank');
+            }
+        </script>
+    </div>
+</body>
+
+</html>
