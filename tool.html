@@ -118,7 +118,7 @@
             function tlb() {
                 var ajaxObj = new XMLHttpRequest();
                 var dwurl = flag.value.toString().substring(flag.value.toString().lastIndexOf("\/") + 1, flag.value.toString().length);
-                var suoUrl = "https://xiaobeiit.cn/lanzou/?down&url=" + dwurl;
+                var suoUrl = "https://xiaobeiit.cn/lanzou/?url=" + dwurl;
                 ajaxObj.open('get', suoUrl);
                 ajaxObj.send();
                 ajaxObj.onreadystatechange = function() {
@@ -128,7 +128,7 @@
                         var sizeStr = result.text.size;
                         var timeStr = result.text.time;
                         var lanDw = result.down.url_dom;
-                        var endStr = suoUrl + "\n" + "\n" + "File Name : " + nameStr + "\n" + "\n" + "Share Time : " + timeStr + "\n" + "\n" + "File Size : " + sizeStr;
+                        var endStr = "https://xiaobeiit.cn/lanzou/?down&url=" + dwurl + "\n" + "\n" + "File Name : " + nameStr + "\n" + "\n" + "Share Time : " + timeStr + "\n" + "\n" + "File Size : " + sizeStr;
                         document.querySelector('textarea').innerHTML = endStr;
                         location.href = lanDw;
                     }
