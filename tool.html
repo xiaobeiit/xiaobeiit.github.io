@@ -118,7 +118,7 @@
             function tlb() {
                 var ajaxObj = new XMLHttpRequest();
                 var dwurl = flag.value.toString().substring(flag.value.toString().lastIndexOf("\/") + 1, flag.value.toString().length);
-                var suoUrl = "https://xiaobeiit.cn/lanzou/?url=" + dwurl;
+                var suoUrl = "https://xiaobeiit.cn/lanzou/?down&url=" + dwurl;
                 ajaxObj.open('get', suoUrl);
                 ajaxObj.send();
                 ajaxObj.onreadystatechange = function() {
