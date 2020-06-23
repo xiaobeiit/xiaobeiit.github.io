@@ -15,7 +15,7 @@
 <body>
     <div class='container'>
         <div>
-            <input type="text" id="text" value="" class="input">
+            <input type="text" id="text" value="" class="input" autofocus="autofocus" />
         </div>
         <div>
             <div class='btn red center' onclick='ysa()'>iQiYi</div>
@@ -35,7 +35,7 @@
             <div class='btn light center' onclick='yya()'>Mi Gu</div>
             <div class='btn green center' onclick='yyb()'>Qmusic</div>
             <div class='btn blue center' onclick='yyc()'>YunCun</div>
-            <div class='btn red center' onclick='hui()'>Hui Du</div>
+            <div class='btn red center' onclick='chati()'>Cha Ti</div>
             <div class='btn dark center' onclick='jkc()'>Line C</div>
         </div>
         <div>
@@ -228,8 +228,21 @@
                 window.open("http://tool.liumingye.cn/music/?page=audioPage&type=YQD&name=" + flag.value, '_blank');
             }
 
-            function hui() {
-                window.open("https://xiaobeiit.gitee.io/web.html", '_blank');
+            function chati() {
+                var ajaxObj = new XMLHttpRequest();
+                var stUrl = "https://xiaobeiit.cn/api/st.php?q=" + flag.value;
+                ajaxObj.open('get', stUrl);
+                ajaxObj.send();
+                ajaxObj.onreadystatechange = function() {
+                    if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
+                        var result = JSON.parse(ajaxObj.responseText);
+                        var q = result.data[0].q;
+                        var a = result.data[0].a;
+                        var endStr = q + "\n" + "\n" + a;
+                        document.querySelector('textarea').innerHTML = endStr;
+                        document.getElementById('text').value = '';
+                    }
+                }
             }
         </script>
     </div>
