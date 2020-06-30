@@ -239,14 +239,14 @@
 
             function chati() {
                 var ajaxObj = new XMLHttpRequest();
-                var stUrl = "https://xiaobeiit.cn/api/st.php?q=" + flag.value;
+                var stUrl = "https://xiaobeiit.cn/wk/?q=" + flag.value;
                 ajaxObj.open('get', stUrl);
                 ajaxObj.send();
                 ajaxObj.onreadystatechange = function() {
                     if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
                         var result = JSON.parse(ajaxObj.responseText);
-                        var q = result.data[0].q;
-                        var a = result.data[0].a;
+                        var q = result.q;
+                        var a = result.a;
                         var endStr = q + "\n" + "\n" + a;
                         document.querySelector('textarea').innerHTML = endStr;
                         document.getElementById('text').value = '';
