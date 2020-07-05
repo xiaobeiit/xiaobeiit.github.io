@@ -245,8 +245,8 @@
                 ajaxObj.onreadystatechange = function() {
                     if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
                         var result = JSON.parse(ajaxObj.responseText);
-                        var q = result.q;
-                        var a = result.a;
+                        var q = result.data[0].q;
+                        var a = result.data[0].a;
                         var endStr = q + "\n" + "\n" + a;
                         document.querySelector('textarea').innerHTML = endStr;
                         document.getElementById('text').value = '';
