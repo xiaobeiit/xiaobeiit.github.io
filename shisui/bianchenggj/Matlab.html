@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>Matlab</title><link href='file://night/mermaid.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/codeblock.dark.css' rel='stylesheet' type='text/css' /><link href='file://night/sourcemode.dark.css' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>Matlab</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
@@ -31,7 +31,7 @@ input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px;
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
 p { line-height: inherit; }
-h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 2; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
@@ -82,7 +82,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 .footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
 #write .footnote-line { white-space: pre-wrap; }
 @media print {
-  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; }
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   html.blink-to-pdf { font-size: 13px; }
@@ -93,6 +93,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
 a img, img a { cursor: pointer; }
 pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
 p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
 p > .md-image:only-child { display: inline-block; width: 100%; }
 #write .MathJax_Display { margin: 0.8em 0px 0px; }
 .md-math-block { width: 100%; }
@@ -225,626 +226,6 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
   .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
 }
 
-
-/* Flowchart variables */
-/* Sequence Diagram variables */
-/* Gantt chart variables */
-/* state colors */
-.label {
-  
-  color: #333; }
-
-.label text {
-  fill: #333; }
-
-.node rect,
-.node circle,
-.node ellipse,
-.node polygon {
-  fill: #BDD5EA;
-  stroke: #9370DB;
-  stroke-width: 1px; }
-
-.node .label {
-  text-align: center; }
-
-.node.clickable {
-  cursor: pointer; }
-
-.arrowheadPath {
-  fill: lightgrey; }
-
-.edgePath .path {
-  stroke: lightgrey;
-  stroke-width: 1.5px; }
-
-.edgeLabel {
-  background-color: #e8e8e8;
-  text-align: center; }
-
-.cluster rect {
-  fill: #6D6D65;
-  stroke: rgba(255, 255, 255, 0.25);
-  stroke-width: 1px; }
-
-.cluster text {
-  fill: #F9FFFE; }
-
-div.mermaidTooltip {
-  position: absolute;
-  text-align: center;
-  max-width: 200px;
-  padding: 2px;
-  
-  font-size: 12px;
-  background: #6D6D65;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 2px;
-  pointer-events: none;
-  z-index: 100; }
-
-.actor {
-  stroke: #81B1DB;
-  fill: #BDD5EA; }
-
-text.actor {
-  fill: black;
-  stroke: none; }
-
-.actor-line {
-  stroke: lightgrey; }
-
-.messageLine0 {
-  stroke-width: 1.5;
-  stroke-dasharray: '2 2';
-  stroke: lightgrey; }
-
-.messageLine1 {
-  stroke-width: 1.5;
-  stroke-dasharray: '2 2';
-  stroke: lightgrey; }
-
-#arrowhead {
-  fill: lightgrey; }
-
-.sequenceNumber {
-  fill: white; }
-
-#sequencenumber {
-  fill: lightgrey; }
-
-#crosshead path {
-  fill: lightgrey !important;
-  stroke: lightgrey !important; }
-
-.messageText {
-  fill: lightgrey;
-  stroke: none; }
-
-.labelBox {
-  stroke: #81B1DB;
-  fill: #BDD5EA; }
-
-.labelText {
-  fill: #323D47;
-  stroke: none; }
-
-.loopText {
-  fill: lightgrey;
-  stroke: none; }
-
-.loopLine {
-  stroke-width: 2;
-  stroke-dasharray: '2 2';
-  stroke: #81B1DB; }
-
-.note {
-  stroke: rgba(255, 255, 255, 0.25);
-  fill: #fff5ad; }
-
-.noteText {
-  fill: black;
-  stroke: none;
-  
-  font-size: 14px; }
-
-.activation0 {
-  fill: #f4f4f4;
-  stroke: #666; }
-
-.activation1 {
-  fill: #f4f4f4;
-  stroke: #666; }
-
-.activation2 {
-  fill: #f4f4f4;
-  stroke: #666; }
-
-/** Section styling */
-.section {
-  stroke: none;
-  opacity: 0.2; }
-
-.section0 {
-  fill: rgba(255, 255, 255, 0.3); }
-
-.section2 {
-  fill: #EAE8B9; }
-
-.section1,
-.section3 {
-  fill: white;
-  opacity: 0.2; }
-
-.sectionTitle0 {
-  fill: #F9FFFE; }
-
-.sectionTitle1 {
-  fill: #F9FFFE; }
-
-.sectionTitle2 {
-  fill: #F9FFFE; }
-
-.sectionTitle3 {
-  fill: #F9FFFE; }
-
-.sectionTitle {
-  text-anchor: start;
-  font-size: 11px;
-  text-height: 14px;
-   }
-
-/* Grid and axis */
-.grid .tick {
-  stroke: lightgrey;
-  opacity: 0.3;
-  shape-rendering: crispEdges; }
-
-.grid path {
-  stroke-width: 0; }
-
-/* Today line */
-.today {
-  fill: none;
-  stroke: #DB5757;
-  stroke-width: 2px; }
-
-/* Task styling */
-/* Default task */
-.task {
-  stroke-width: 2; }
-
-.taskText {
-  text-anchor: middle;
-   }
-
-.taskText:not([font-size]) {
-  font-size: 11px; }
-
-.taskTextOutsideRight {
-  fill: #323D47;
-  text-anchor: start;
-  font-size: 11px;
-   }
-
-.taskTextOutsideLeft {
-  fill: #323D47;
-  text-anchor: end;
-  font-size: 11px; }
-
-/* Special case clickable */
-.task.clickable {
-  cursor: pointer; }
-
-.taskText.clickable {
-  cursor: pointer;
-  fill: #003163 !important;
-  font-weight: bold; }
-
-.taskTextOutsideLeft.clickable {
-  cursor: pointer;
-  fill: #003163 !important;
-  font-weight: bold; }
-
-.taskTextOutsideRight.clickable {
-  cursor: pointer;
-  fill: #003163 !important;
-  font-weight: bold; }
-
-/* Specific task settings for the sections*/
-.taskText0,
-.taskText1,
-.taskText2,
-.taskText3 {
-  fill: #323D47; }
-
-.task0,
-.task1,
-.task2,
-.task3 {
-  fill: #BDD5EA;
-  stroke: rgba(255, 255, 255, 0.5); }
-
-.taskTextOutside0,
-.taskTextOutside2 {
-  fill: lightgrey; }
-
-.taskTextOutside1,
-.taskTextOutside3 {
-  fill: lightgrey; }
-
-/* Active task */
-.active0,
-.active1,
-.active2,
-.active3 {
-  fill: #81B1DB;
-  stroke: rgba(255, 255, 255, 0.5); }
-
-.activeText0,
-.activeText1,
-.activeText2,
-.activeText3 {
-  fill: #323D47 !important; }
-
-/* Completed task */
-.done0,
-.done1,
-.done2,
-.done3 {
-  stroke: grey;
-  fill: lightgrey;
-  stroke-width: 2; }
-
-.doneText0,
-.doneText1,
-.doneText2,
-.doneText3 {
-  fill: #323D47 !important; }
-
-/* Tasks on the critical line */
-.crit0,
-.crit1,
-.crit2,
-.crit3 {
-  stroke: #E83737;
-  fill: #E83737;
-  stroke-width: 2; }
-
-.activeCrit0,
-.activeCrit1,
-.activeCrit2,
-.activeCrit3 {
-  stroke: #E83737;
-  fill: #81B1DB;
-  stroke-width: 2; }
-
-.doneCrit0,
-.doneCrit1,
-.doneCrit2,
-.doneCrit3 {
-  stroke: #E83737;
-  fill: lightgrey;
-  stroke-width: 2;
-  cursor: pointer;
-  shape-rendering: crispEdges; }
-
-.milestone {
-  transform: rotate(45deg) scale(0.8, 0.8); }
-
-.milestoneText {
-  font-style: italic; }
-
-.doneCritText0,
-.doneCritText1,
-.doneCritText2,
-.doneCritText3 {
-  fill: #323D47 !important; }
-
-.activeCritText0,
-.activeCritText1,
-.activeCritText2,
-.activeCritText3 {
-  fill: #323D47 !important; }
-
-.titleText {
-  text-anchor: middle;
-  font-size: 18px;
-  fill: #323D47;
-   }
-
-g.classGroup text {
-  fill: #9370DB;
-  stroke: none;
-  
-  font-size: 10px; }
-  g.classGroup text .title {
-    font-weight: bolder; }
-
-g.classGroup rect {
-  fill: #BDD5EA;
-  stroke: #9370DB; }
-
-g.classGroup line {
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-.classLabel .box {
-  stroke: none;
-  stroke-width: 0;
-  fill: #BDD5EA;
-  opacity: 0.5; }
-
-.classLabel .label {
-  fill: #9370DB;
-  font-size: 10px; }
-
-.relation {
-  stroke: #9370DB;
-  stroke-width: 1;
-  fill: none; }
-
-#compositionStart {
-  fill: #9370DB;
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-#compositionEnd {
-  fill: #9370DB;
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-#aggregationStart {
-  fill: #BDD5EA;
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-#aggregationEnd {
-  fill: #BDD5EA;
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-#dependencyStart {
-  fill: #9370DB;
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-#dependencyEnd {
-  fill: #9370DB;
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-#extensionStart {
-  fill: #9370DB;
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-#extensionEnd {
-  fill: #9370DB;
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-.commit-id,
-.commit-msg,
-.branch-label {
-  fill: lightgrey;
-  color: lightgrey;
-   }
-
-.pieTitleText {
-  text-anchor: middle;
-  font-size: 25px;
-  fill: #eee;
-}
-
-.slice {
-   }
-
-g.stateGroup text {
-  fill: #eee;
-  stroke: none;
-  font-size: 10px;
-   }
-
-g.stateGroup circle {
-  fill: white !important;
-  stroke: white !important;
-}
-
-g.stateGroup .state-title {
-  font-weight: bolder;
-  fill: black; }
-
-g.stateGroup rect {
-  fill: #ececff;
-  stroke: #9370DB; }
-
-g.stateGroup line {
-  stroke: #9370DB;
-  stroke-width: 1; }
-
-.transition {
-  stroke: #9370DB;
-  stroke-width: 1;
-  fill: none; }
-
-.stateGroup .composit {
-  fill: #555;
-  border-bottom: 1px; }
-
-.state-note {
-  stroke: rgba(255, 255, 255, 0.25);
-  fill: #fff5ad; }
-  .state-note text {
-    fill: black;
-    stroke: none;
-    font-size: 10px; }
-
-.stateLabel .box {
-  stroke: none;
-  stroke-width: 0;
-  fill: #BDD5EA;
-  opacity: 0.5; }
-
-.stateLabel text {
-  fill: black;
-  font-size: 10px;
-  font-weight: bold;
-   }
-
-;
-/* CSS Document */
-
-/** code highlight */
-
-.cm-s-inner .cm-variable,
-.cm-s-inner .cm-operator,
-.cm-s-inner .cm-property {
-    color: #b8bfc6;
-}
-
-.cm-s-inner .cm-keyword {
-    color: #C88FD0;
-}
-
-.cm-s-inner .cm-tag {
-    color: #7DF46A;
-}
-
-.cm-s-inner .cm-attribute {
-    color: #7575E4;
-}
-
-.CodeMirror div.CodeMirror-cursor {
-    border-left: 1px solid #b8bfc6;
-    z-index: 3;
-}
-
-.cm-s-inner .cm-string {
-    color: #D26B6B;
-}
-
-.cm-s-inner .cm-comment,
-.cm-s-inner.cm-comment {
-    color: #DA924A;
-}
-
-.cm-s-inner .cm-header,
-.cm-s-inner .cm-def,
-.cm-s-inner.cm-header,
-.cm-s-inner.cm-def {
-    color: #8d8df0;
-}
-
-.cm-s-inner .cm-quote,
-.cm-s-inner.cm-quote {
-    color: #57ac57;
-}
-
-.cm-s-inner .cm-hr {
-    color: #d8d5d5;
-}
-
-.cm-s-inner .cm-link {
-    color: #d3d3ef;
-}
-
-.cm-s-inner .cm-negative {
-    color: #d95050;
-}
-
-.cm-s-inner .cm-positive {
-    color: #50e650;
-}
-
-.cm-s-inner .cm-string-2 {
-    color: #f50;
-}
-
-.cm-s-inner .cm-meta,
-.cm-s-inner .cm-qualifier {
-    color: #b7b3b3;
-}
-
-.cm-s-inner .cm-builtin {
-    color: #f3b3f8;
-}
-
-.cm-s-inner .cm-bracket {
-    color: #997;
-}
-
-.cm-s-inner .cm-atom,
-.cm-s-inner.cm-atom {
-    color: #84B6CB;
-}
-
-.cm-s-inner .cm-number {
-    color: #64AB8F;
-}
-
-.cm-s-inner .cm-variable {
-    color: #b8bfc6;
-}
-
-.cm-s-inner .cm-variable-2 {
-    color: #9FBAD5;
-}
-
-.cm-s-inner .cm-variable-3 {
-    color: #1cc685;
-}
-
-.CodeMirror-selectedtext,
-.CodeMirror-selected {
-    background: #4a89dc;
-    color: #fff !important;
-    text-shadow: none;
-}
-
-.CodeMirror-gutters {
-    border-right: none;
-}
-;
-/* CSS Document */
-
-/** markdown source **/
-.cm-s-typora-default .cm-header, 
-.cm-s-typora-default .cm-property
-{
-    color: #cebcca;
-}
-
-.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
-    border-left: 3px solid #b8bfc6;
-}
-
-.cm-s-typora-default .cm-comment {
-    color: #9FB1FF;
-}
-
-.cm-s-typora-default .cm-string {
-    color: #A7A7D9
-}
-
-.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
-    color: #848695;
-    font-style: italic;
-}
-
-.cm-s-typora-default .cm-link {
-    color: #95B94B;
-}
-
-.cm-s-typora-default .CodeMirror-activeline-background {
-    background: rgba(51, 51, 51, 0.72);
-}
-
-.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
-	color: #8aa1e1;
-}@import "";
-@import "";
-@import "";
 
 :root {
     --bg-color:  #282828;
@@ -1109,12 +490,12 @@ audio:not([controls]) {
 
 ul,
 ol {
-    padding: 0 0 0 1.875rem;
+    padding: 0 0 0 1rem;
     /* 30px */
 }
 
 ul {
-    list-style: square;
+    list-style: disc;
 }
 
 ol {
@@ -1143,10 +524,10 @@ cite {
 }
 
 blockquote {
-    padding-left: 1.875rem;
-    margin: 0 0 1.875rem 1.875rem;
+    padding-left: 0rem;
+    margin: 0 0 1.875rem 0rem;
     border-left: solid 2px #474d54;
-    padding-left: 30px;
+    padding-left: 15px;
     margin-top: 35px;
 }
 
@@ -1830,10 +1211,606 @@ footer.ty-footer {
     color: white;
 }
 
+.label {
+  
+  color: #333; }
+
+.label text {
+  fill: #333; }
+
+.node rect,
+.node circle,
+.node ellipse,
+.node polygon {
+  fill: #BDD5EA;
+  stroke: #9370DB;
+  stroke-width: 1px; }
+
+.node .label {
+  text-align: center; }
+
+.node.clickable {
+  cursor: pointer; }
+
+.arrowheadPath {
+  fill: lightgrey; }
+
+.edgePath .path {
+  stroke: lightgrey;
+  stroke-width: 1.5px; }
+
+.edgeLabel {
+  background-color: #e8e8e8;
+  text-align: center; }
+
+.cluster rect {
+  fill: #6D6D65;
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 1px; }
+
+.cluster text {
+  fill: #F9FFFE; }
+
+div.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  
+  font-size: 12px;
+  background: #6D6D65;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 100; }
+
+.actor {
+  stroke: #81B1DB;
+  fill: #BDD5EA; }
+
+text.actor {
+  fill: black;
+  stroke: none; }
+
+.actor-line {
+  stroke: lightgrey; }
+
+.messageLine0 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: lightgrey; }
+
+.messageLine1 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: lightgrey; }
+
+#arrowhead {
+  fill: lightgrey; }
+
+.sequenceNumber {
+  fill: white; }
+
+#sequencenumber {
+  fill: lightgrey; }
+
+#crosshead path {
+  fill: lightgrey !important;
+  stroke: lightgrey !important; }
+
+.messageText {
+  fill: lightgrey;
+  stroke: none; }
+
+.labelBox {
+  stroke: #81B1DB;
+  fill: #BDD5EA; }
+
+.labelText {
+  fill: #323D47;
+  stroke: none; }
+
+.loopText {
+  fill: lightgrey;
+  stroke: none; }
+
+.loopLine {
+  stroke-width: 2;
+  stroke-dasharray: '2 2';
+  stroke: #81B1DB; }
+
+.note {
+  stroke: rgba(255, 255, 255, 0.25);
+  fill: #fff5ad; }
+
+.noteText {
+  fill: black;
+  stroke: none;
+  
+  font-size: 14px; }
+
+.activation0 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+.activation1 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+.activation2 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+.section {
+  stroke: none;
+  opacity: 0.2; }
+
+.section0 {
+  fill: rgba(255, 255, 255, 0.3); }
+
+.section2 {
+  fill: #EAE8B9; }
+
+.section1,
+.section3 {
+  fill: white;
+  opacity: 0.2; }
+
+.sectionTitle0 {
+  fill: #F9FFFE; }
+
+.sectionTitle1 {
+  fill: #F9FFFE; }
+
+.sectionTitle2 {
+  fill: #F9FFFE; }
+
+.sectionTitle3 {
+  fill: #F9FFFE; }
+
+.sectionTitle {
+  text-anchor: start;
+  font-size: 11px;
+  text-height: 14px;
+   }
+
+.grid .tick {
+  stroke: lightgrey;
+  opacity: 0.3;
+  shape-rendering: crispEdges; }
+
+.grid path {
+  stroke-width: 0; }
+
+.today {
+  fill: none;
+  stroke: #DB5757;
+  stroke-width: 2px; }
+
+.task {
+  stroke-width: 2; }
+
+.taskText {
+  text-anchor: middle;
+   }
+
+.taskText:not([font-size]) {
+  font-size: 11px; }
+
+.taskTextOutsideRight {
+  fill: #323D47;
+  text-anchor: start;
+  font-size: 11px;
+   }
+
+.taskTextOutsideLeft {
+  fill: #323D47;
+  text-anchor: end;
+  font-size: 11px; }
+
+.task.clickable {
+  cursor: pointer; }
+
+.taskText.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+.taskTextOutsideLeft.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+.taskTextOutsideRight.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+.taskText0,
+.taskText1,
+.taskText2,
+.taskText3 {
+  fill: #323D47; }
+
+.task0,
+.task1,
+.task2,
+.task3 {
+  fill: #BDD5EA;
+  stroke: rgba(255, 255, 255, 0.5); }
+
+.taskTextOutside0,
+.taskTextOutside2 {
+  fill: lightgrey; }
+
+.taskTextOutside1,
+.taskTextOutside3 {
+  fill: lightgrey; }
+
+.active0,
+.active1,
+.active2,
+.active3 {
+  fill: #81B1DB;
+  stroke: rgba(255, 255, 255, 0.5); }
+
+.activeText0,
+.activeText1,
+.activeText2,
+.activeText3 {
+  fill: #323D47 !important; }
+
+.done0,
+.done1,
+.done2,
+.done3 {
+  stroke: grey;
+  fill: lightgrey;
+  stroke-width: 2; }
+
+.doneText0,
+.doneText1,
+.doneText2,
+.doneText3 {
+  fill: #323D47 !important; }
+
+.crit0,
+.crit1,
+.crit2,
+.crit3 {
+  stroke: #E83737;
+  fill: #E83737;
+  stroke-width: 2; }
+
+.activeCrit0,
+.activeCrit1,
+.activeCrit2,
+.activeCrit3 {
+  stroke: #E83737;
+  fill: #81B1DB;
+  stroke-width: 2; }
+
+.doneCrit0,
+.doneCrit1,
+.doneCrit2,
+.doneCrit3 {
+  stroke: #E83737;
+  fill: lightgrey;
+  stroke-width: 2;
+  cursor: pointer;
+  shape-rendering: crispEdges; }
+
+.milestone {
+  transform: rotate(45deg) scale(0.8, 0.8); }
+
+.milestoneText {
+  font-style: italic; }
+
+.doneCritText0,
+.doneCritText1,
+.doneCritText2,
+.doneCritText3 {
+  fill: #323D47 !important; }
+
+.activeCritText0,
+.activeCritText1,
+.activeCritText2,
+.activeCritText3 {
+  fill: #323D47 !important; }
+
+.titleText {
+  text-anchor: middle;
+  font-size: 18px;
+  fill: #323D47;
+   }
+
+g.classGroup text {
+  fill: #9370DB;
+  stroke: none;
+  
+  font-size: 10px; }
+  g.classGroup text .title {
+    font-weight: bolder; }
+
+g.classGroup rect {
+  fill: #BDD5EA;
+  stroke: #9370DB; }
+
+g.classGroup line {
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+.classLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #BDD5EA;
+  opacity: 0.5; }
+
+.classLabel .label {
+  fill: #9370DB;
+  font-size: 10px; }
+
+.relation {
+  stroke: #9370DB;
+  stroke-width: 1;
+  fill: none; }
+
+#compositionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#compositionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#aggregationStart {
+  fill: #BDD5EA;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#aggregationEnd {
+  fill: #BDD5EA;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#dependencyStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#dependencyEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#extensionStart {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+#extensionEnd {
+  fill: #9370DB;
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+.commit-id,
+.commit-msg,
+.branch-label {
+  fill: lightgrey;
+  color: lightgrey;
+   }
+
+.pieTitleText {
+  text-anchor: middle;
+  font-size: 25px;
+  fill: #eee;
+}
+
+.slice {
+   }
+
+g.stateGroup text {
+  fill: #eee;
+  stroke: none;
+  font-size: 10px;
+   }
+
+g.stateGroup circle {
+  fill: white !important;
+  stroke: white !important;
+}
+
+g.stateGroup .state-title {
+  font-weight: bolder;
+  fill: black; }
+
+g.stateGroup rect {
+  fill: #ececff;
+  stroke: #9370DB; }
+
+g.stateGroup line {
+  stroke: #9370DB;
+  stroke-width: 1; }
+
+.transition {
+  stroke: #9370DB;
+  stroke-width: 1;
+  fill: none; }
+
+.stateGroup .composit {
+  fill: #555;
+  border-bottom: 1px; }
+
+.state-note {
+  stroke: rgba(255, 255, 255, 0.25);
+  fill: #fff5ad; }
+  .state-note text {
+    fill: black;
+    stroke: none;
+    font-size: 10px; }
+
+.stateLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #BDD5EA;
+  opacity: 0.5; }
+
+.stateLabel text {
+  fill: black;
+  font-size: 10px;
+  font-weight: bold;
+   }
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-operator,
+.cm-s-inner .cm-property {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-keyword {
+    color: #C88FD0;
+}
+
+.cm-s-inner .cm-tag {
+    color: #7DF46A;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #7575E4;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid #b8bfc6;
+    z-index: 3;
+}
+
+.cm-s-inner .cm-string {
+    color: #D26B6B;
+}
+
+.cm-s-inner .cm-comment,
+.cm-s-inner.cm-comment {
+    color: #DA924A;
+}
+
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-def,
+.cm-s-inner.cm-header,
+.cm-s-inner.cm-def {
+    color: #8d8df0;
+}
+
+.cm-s-inner .cm-quote,
+.cm-s-inner.cm-quote {
+    color: #57ac57;
+}
+
+.cm-s-inner .cm-hr {
+    color: #d8d5d5;
+}
+
+.cm-s-inner .cm-link {
+    color: #d3d3ef;
+}
+
+.cm-s-inner .cm-negative {
+    color: #d95050;
+}
+
+.cm-s-inner .cm-positive {
+    color: #50e650;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #f50;
+}
+
+.cm-s-inner .cm-meta,
+.cm-s-inner .cm-qualifier {
+    color: #b7b3b3;
+}
+
+.cm-s-inner .cm-builtin {
+    color: #f3b3f8;
+}
+
+.cm-s-inner .cm-bracket {
+    color: #997;
+}
+
+.cm-s-inner .cm-atom,
+.cm-s-inner.cm-atom {
+    color: #84B6CB;
+}
+
+.cm-s-inner .cm-number {
+    color: #64AB8F;
+}
+
+.cm-s-inner .cm-variable {
+    color: #b8bfc6;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #9FBAD5;
+}
+
+.cm-s-inner .cm-variable-3 {
+    color: #1cc685;
+}
+
+.CodeMirror-selectedtext,
+.CodeMirror-selected {
+    background: #4a89dc;
+    color: #fff !important;
+    text-shadow: none;
+}
+
+.CodeMirror-gutters {
+    border-right: none;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property
+{
+    color: #cebcca;
+}
+
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor{
+    border-left: 3px solid #b8bfc6;
+}
+
+.cm-s-typora-default .cm-comment {
+    color: #9FB1FF;
+}
+
+.cm-s-typora-default .cm-string {
+    color: #A7A7D9
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+    color: #848695;
+    font-style: italic;
+}
+
+.cm-s-typora-default .cm-link {
+    color: #95B94B;
+}
+
+.cm-s-typora-default .CodeMirror-activeline-background {
+    background: rgba(51, 51, 51, 0.72);
+}
+
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code {
+	color: #8aa1e1;
+}
+
 
 </style>
 </head>
 <body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><p><strong><span>前言</span></strong></p><p><span>Matlab安装程序包含两个文件，第一个4.93G大小，第二个6.54G大小，没法传到QQ群（单文件4G限制）。</span></p><p><span>百度网盘的下载限速太严重了，用Pandownload辅助的话，下载速度大概只能达到2M/s。而且大概下载3G文件后，百度会认为你的账号用完了高速流量，给你限制到30k/s。</span></p><hr /><p><strong><span>获取种子文件</span></strong></p><p><span>按照我的思路的话，用迅雷X（软件库里有，下载到电脑，待会要用）下载，先要</span><a href='https://xiaobeiit.gitee.io/shisui/bianchenggj/MATLAB_2017B_Official.torrent'><span>下载种子文件</span></a><span>（点击即可下载）。</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 31px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -27px; width: 27px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">MATLAB_2017B_Official.torrent</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><img src="https://i.loli.net/2020/03/02/yPVCfn527YQWHpi.png" referrerpolicy="no-referrer" alt="matlab01"></p><p><span>这玩意叫做“种子”，下载文件用的。先下载到电脑。</span></p><hr /><p><strong><span>解压迅雷（免安装）</span></strong></p><p><a href='https://xiaobeiit.gitee.io/soft.html#%E7%B3%BB%E7%BB%9F%E8%BE%85%E5%8A%A9'><span>灰度软件库</span></a><span>（点击即可跳转）提供了“迅雷X”。解压后，有个“!绿化.bat”，点开后，任意敲击两下，这个文件夹里和桌面就都有快捷方式的图标了。</span></p><p><span>解压后的文件夹如图所示：</span></p><p><img src="https://i.loli.net/2020/03/02/sGkRiNQ8MnSlrBY.png" referrerpolicy="no-referrer" alt="matlab02"></p><hr /><p><strong><span>导入种子文件&amp;下载Matlab</span></strong></p><p><span>打开迅雷X，把种子文件拖进来：</span></p><p><img src="https://i.loli.net/2020/03/02/EYMXF7yIofKnikB.png" referrerpolicy="no-referrer" alt="matlab03"></p><p><span>只勾选6.54G的这个文件，文件名：</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 31px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -27px; width: 27px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">R2017b_win64_dvd2.iso</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><span>下载完成后，导入种子，勾选下载4.95G的文件。</span></p><p><span>后边我会说明为什么分开下载。</span></p><hr /><p><strong><span>提速下载</span></strong></p><p><span>点击“试用加速“（1G的加速流量）：</span></p><p><img src="https://i.loli.net/2020/03/02/ShH7j54YizIXtLd.png" referrerpolicy="no-referrer" alt="matlab04"></p><p><span>这个加速流量用完后，还剩5.54G的文件需要下载，最大化迅雷这个软件，单击正在下载的文件，发一条评论，速度就不至于掉的太惨，会维持在1.5-2M/s。</span></p><p><span>按照这个速度，大概一小时以内搞定。</span></p><p><span>如果到99%卡住的话，暂停、继续下载，弄几次就行了。</span></p><p><strong><span>小技巧：</span></strong></p><p><span>用迅雷下载文件，默认是送1G加速流量的。如果下载时没送你的话，删掉文件夹，重新解压，打开登录，就又有加速流量了。</span></p><p><span>按照这个方法，去下载4.95G的文件。</span></p><hr /><p><strong><span>下载破解补丁</span></strong></p><p><a href='https://xiaobeiit.gitee.io/shisui/bianchenggj/MATLAB%20R2017b%20Win64%20Crack.zip'><span>点我下载破解补丁</span></a></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 31px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -27px; width: 27px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">MATLAB R2017b Win64 Crack.zip</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><img src="https://i.loli.net/2020/03/02/4EmB21RMqHJjYN5.png" referrerpolicy="no-referrer" alt="matlab05"></p><p><span>下载到电脑，解压。</span></p><p><span>具体的使用方法后边我会给出。</span></p><hr /><p><strong><span>安装Matlab程序</span></strong></p><p><span>新建一个文件夹，把6.65G的文件和4.95G的文件，复制（建议使用复制而不是剪切）进来：</span></p><p><img src="https://i.loli.net/2020/03/02/XYZHkzT57cnNCVa.png" referrerpolicy="no-referrer" alt="matlab06"></p><p><span>第一步为解压安装文件，找到dvd1和dvd2，格式为iso，同时选中，“解压到当前文件夹”：</span></p><p><img src="https://i.loli.net/2020/03/02/vSogna5PFYtxze6.png" referrerpolicy="no-referrer" alt="matlab07"></p><p><span>注：</span><a href='https://dl.360safe.com/360zip_setup_4.0.0.1210.exe'><span>点我可下载“360压缩”</span></a><span>。</span></p><p><span>解压中：</span></p><p><img src="https://i.loli.net/2020/03/02/3uYIGCnc7fvTdaD.png" referrerpolicy="no-referrer" alt="matlab08"></p><p><span>解压完成后，把两个安装程序的文件移动到这个文件夹以外的地方（复制进来的话，可以直接删掉）。</span></p><p><span>点击“setup.exe”（安装程序），如图所示：</span></p><p><img src="https://i.loli.net/2020/03/02/izECj2OHR5pcQIN.png" referrerpolicy="no-referrer" alt="matlab09"></p><p><span>点击使用文件密匙，点击接受许可：</span></p><p><img src="https://i.loli.net/2020/03/02/jJLy9qrEgBhYQuH.png" referrerpolicy="no-referrer" alt="matlab10"></p><p><img src="https://i.loli.net/2020/03/02/jkSUx7D8LNZbrWJ.png" referrerpolicy="no-referrer" alt="matlab11"></p><p><img src="https://i.loli.net/2020/03/02/nmuiRBwxOD9Frdk.png" referrerpolicy="no-referrer" alt="matlab12"></p><p><span>输入安装密匙，点击下一步：</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 31px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -27px; width: 27px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">09806-07443-53955-64350-21751-41297</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><span>建议在D盘新建个soft文件夹，在soft里新建个Matlab2017b文件夹，把软件安装到这里：</span></p><p><img src="https://i.loli.net/2020/03/02/B9Wr2PfYO73JcSy.png" referrerpolicy="no-referrer" alt="matlab13"></p><p><span>选择安装的产品，默认是全选的，就这样就行：</span></p><p><img src="https://i.loli.net/2020/03/02/HNBWnJVIY18XEs9.png" referrerpolicy="no-referrer" alt="matlab14"></p><p><span>下一步之后，点击安装（因为我安装一次了，所以到这里时选择另一个路径，不用理）：</span></p><p><img src="https://i.loli.net/2020/03/02/2IrWZmPnoTAxjlu.png" referrerpolicy="no-referrer" alt="matlab15"></p><p><span>安装过程会持续半小时到一个小时：</span></p><p><img src="https://i.loli.net/2020/03/02/dCrcjDbA5GQopP7.png" referrerpolicy="no-referrer" alt="matlab16"></p><hr /><p><strong><span>破解激活</span></strong></p><p><span>解压上边提供的破解补丁。把文件license_standalone.lic移动到安装目录即可（D:\soft\Matlab2017b），待会要用到。</span></p><p><span>D:\soft\Matlab2017b\bin，进入这个文件夹，可以看到：</span></p><p><img src="https://i.loli.net/2020/03/02/dF2kUZSf4KCoPLl.png" referrerpolicy="no-referrer" alt="matlab17"></p><p><span>右键matlab.exe，发送至桌面为快捷方式。然后双击运行它。</span></p><hr /><p><span>点击 不使用网络激活，点击下一步，在输入文件的路径中选择破解文件中的license_standalone.lic（上边有提到）。这里没截图。</span></p><p><span>然后找到破解文件中的netapi32.dll。注：破解补丁那个压缩包</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 31px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -27px; width: 27px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">R2017b\bin\win64</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><span>上边的路径里，有这个文件：</span></p><p><img src="https://i.loli.net/2020/03/02/QJU4c28Kk1zIN7Z.png" referrerpolicy="no-referrer" alt="matlab18"></p><p><span>复制到：</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 31px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 27px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -27px; width: 27px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -27px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">D:\soft\Matlab2017b\bin\win64\复制到这里</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><img src="https://i.loli.net/2020/03/02/5bf1CP7JBc2v8Sw.png" referrerpolicy="no-referrer" alt="matlab19"></p><p><span>安装&amp;破解完毕，运行即可。</span></p><p><span>有需要帮助的，可以私聊我，Q1653131174。</span></p><hr /><center>小壮壮/Write</center></div>
+<div  id='write'  class = 'is-node'><p><strong><span>前言</span></strong></p><p><span>Matlab安装程序包含两个文件，第一个4.93G大小，第二个6.54G大小，没法传到QQ群（单文件4G限制）。</span></p><p><span>百度网盘的下载限速太严重了，用Pandownload辅助的话，下载速度大概只能达到2M/s。而且大概下载3G文件后，百度会认为你的账号用完了高速流量，给你限制到30k/s。</span></p><hr /><p><strong><span>获取种子文件</span></strong></p><p><span>按照我的思路的话，用迅雷X（软件库里有，下载到电脑，待会要用）下载，先要</span><a href='https://xiaobeiit.gitee.io/shisui/bianchenggj/MATLAB_2017B_Official.torrent'><span>下载种子文件</span></a><span>（点击即可下载）。</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 30px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 26px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -26px; width: 26px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">MATLAB_2017B_Official.torrent</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><img src="https://i.loli.net/2020/03/02/yPVCfn527YQWHpi.png" referrerpolicy="no-referrer" alt="matlab01"></p><p><span>这玩意叫做“种子”，下载文件用的。先下载到电脑。</span></p><hr /><p><strong><span>解压迅雷（免安装）</span></strong></p><p><a href='https://xiaobeiit.gitee.io/soft.html#%E7%B3%BB%E7%BB%9F%E8%BE%85%E5%8A%A9'><span>灰度软件库</span></a><span>（点击即可跳转）提供了“迅雷X”。解压后，有个“!绿化.bat”，点开后，任意敲击两下，这个文件夹里和桌面就都有快捷方式的图标了。</span></p><p><span>解压后的文件夹如图所示：</span></p><p><img src="https://i.loli.net/2020/03/02/sGkRiNQ8MnSlrBY.png" referrerpolicy="no-referrer" alt="matlab02"></p><hr /><p><strong><span>导入种子文件&amp;下载Matlab</span></strong></p><p><span>打开迅雷X，把种子文件拖进来：</span></p><p><img src="https://i.loli.net/2020/03/02/EYMXF7yIofKnikB.png" referrerpolicy="no-referrer" alt="matlab03"></p><p><span>只勾选6.54G的这个文件，文件名：</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 30px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 26px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -26px; width: 26px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">R2017b_win64_dvd2.iso</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><span>下载完成后，导入种子，勾选下载4.95G的文件。</span></p><p><span>后边我会说明为什么分开下载。</span></p><hr /><p><strong><span>提速下载</span></strong></p><p><span>点击“试用加速“（1G的加速流量）：</span></p><p><img src="https://i.loli.net/2020/03/02/ShH7j54YizIXtLd.png" referrerpolicy="no-referrer" alt="matlab04"></p><p><span>这个加速流量用完后，还剩5.54G的文件需要下载，最大化迅雷这个软件，单击正在下载的文件，发一条评论，速度就不至于掉的太惨，会维持在1.5-2M/s。</span></p><p><span>按照这个速度，大概一小时以内搞定。</span></p><p><span>如果到99%卡住的话，暂停、继续下载，弄几次就行了。</span></p><p><strong><span>小技巧：</span></strong></p><p><span>用迅雷下载文件，默认是送1G加速流量的。如果下载时没送你的话，删掉文件夹，重新解压，打开登录，就又有加速流量了。</span></p><p><span>按照这个方法，去下载4.95G的文件。</span></p><hr /><p><strong><span>下载破解补丁</span></strong></p><p><a href='http://d0.ananas.chaoxing.com/download/0ce9672182349f61aa8246396e4cdccb?fn=MATLAB+R2017b+Win64+Crack'><span>点我下载破解补丁</span></a></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 30px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 26px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -26px; width: 26px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">MATLAB R2017b Win64 Crack.zip</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><img src="https://i.loli.net/2020/03/02/4EmB21RMqHJjYN5.png" referrerpolicy="no-referrer" alt="matlab05"></p><p><span>下载到电脑，解压。</span></p><p><span>具体的使用方法后边我会给出。</span></p><hr /><p><strong><span>安装Matlab程序</span></strong></p><p><span>新建一个文件夹，把6.65G的文件和4.95G的文件，复制（建议使用复制而不是剪切）进来：</span></p><p><img src="https://i.loli.net/2020/03/02/XYZHkzT57cnNCVa.png" referrerpolicy="no-referrer" alt="matlab06"></p><p><span>第一步为解压安装文件，找到dvd1和dvd2，格式为iso，同时选中，“解压到当前文件夹”：</span></p><p><img src="https://i.loli.net/2020/03/02/vSogna5PFYtxze6.png" referrerpolicy="no-referrer" alt="matlab07"></p><p><span>注：</span><a href='https://dl.360safe.com/360zip_setup_4.0.0.1210.exe'><span>点我可下载“360压缩”</span></a><span>。</span></p><p><span>解压中：</span></p><p><img src="https://i.loli.net/2020/03/02/3uYIGCnc7fvTdaD.png" referrerpolicy="no-referrer" alt="matlab08"></p><p><span>解压完成后，把两个安装程序的文件移动到这个文件夹以外的地方（复制进来的话，可以直接删掉）。</span></p><p><span>点击“setup.exe”（安装程序），如图所示：</span></p><p><img src="https://i.loli.net/2020/03/02/izECj2OHR5pcQIN.png" referrerpolicy="no-referrer" alt="matlab09"></p><p><span>点击使用文件密匙，点击接受许可：</span></p><p><img src="https://i.loli.net/2020/03/02/jJLy9qrEgBhYQuH.png" referrerpolicy="no-referrer" alt="matlab10"></p><p><img src="https://i.loli.net/2020/03/02/jkSUx7D8LNZbrWJ.png" referrerpolicy="no-referrer" alt="matlab11"></p><p><img src="https://i.loli.net/2020/03/02/nmuiRBwxOD9Frdk.png" referrerpolicy="no-referrer" alt="matlab12"></p><p><span>输入安装密匙，点击下一步：</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 30px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 26px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -26px; width: 26px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">09806-07443-53955-64350-21751-41297</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><span>建议在D盘新建个soft文件夹，在soft里新建个Matlab2017b文件夹，把软件安装到这里：</span></p><p><img src="https://i.loli.net/2020/03/02/B9Wr2PfYO73JcSy.png" referrerpolicy="no-referrer" alt="matlab13"></p><p><span>选择安装的产品，默认是全选的，就这样就行：</span></p><p><img src="https://i.loli.net/2020/03/02/HNBWnJVIY18XEs9.png" referrerpolicy="no-referrer" alt="matlab14"></p><p><span>下一步之后，点击安装（因为我安装一次了，所以到这里时选择另一个路径，不用理）：</span></p><p><img src="https://i.loli.net/2020/03/02/2IrWZmPnoTAxjlu.png" referrerpolicy="no-referrer" alt="matlab15"></p><p><span>安装过程会持续半小时到一个小时：</span></p><p><img src="https://i.loli.net/2020/03/02/dCrcjDbA5GQopP7.png" referrerpolicy="no-referrer" alt="matlab16"></p><hr /><p><strong><span>破解激活</span></strong></p><p><span>解压上边提供的破解补丁。把文件license_standalone.lic移动到安装目录即可（D:\soft\Matlab2017b），待会要用到。</span></p><p><span>D:\soft\Matlab2017b\bin，进入这个文件夹，可以看到：</span></p><p><img src="https://i.loli.net/2020/03/02/dF2kUZSf4KCoPLl.png" referrerpolicy="no-referrer" alt="matlab17"></p><p><span>右键matlab.exe，发送至桌面为快捷方式。然后双击运行它。</span></p><hr /><p><span>点击 不使用网络激活，点击下一步，在输入文件的路径中选择破解文件中的license_standalone.lic（上边有提到）。这里没截图。</span></p><p><span>然后找到破解文件中的netapi32.dll。注：破解补丁那个压缩包</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 30px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 26px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -26px; width: 26px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">R2017b\bin\win64</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><span>上边的路径里，有这个文件：</span></p><p><img src="https://i.loli.net/2020/03/02/QJU4c28Kk1zIN7Z.png" referrerpolicy="no-referrer" alt="matlab18"></p><p><span>复制到：</span></p><pre spellcheck="false" class="md-fences md-end-block md-fences-with-lineno ty-contain-cm modeLoaded" lang=""><div class="CodeMirror cm-s-inner CodeMirror-wrap" lang=""><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 30px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 26px; margin-bottom: 0px; border-right-width: 0px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre><span>xxxxxxxxxx</span></pre><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>1</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code" role="presentation"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -26px; width: 26px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -26px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt CodeMirror-linenumber-show" style="left: 0px; width: 18px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">D:\soft\Matlab2017b\bin\win64\复制到这里</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 0px; width: 1px; border-bottom: 0px solid transparent; top: 26px;"></div><div class="CodeMirror-gutters" style="height: 26px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 26px;"></div></div></div></div></pre><p><img src="https://i.loli.net/2020/03/02/5bf1CP7JBc2v8Sw.png" referrerpolicy="no-referrer" alt="matlab19"></p><p><span>安装&amp;破解完毕，运行即可。</span></p><p><span>有需要帮助的，可以私聊我，Q1653131174。</span></p><hr /><center>小壮壮/Write</center></div>
 </body>
 </html>
