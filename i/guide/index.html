@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>引导页</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
+<title>小北IT使用指南</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
 iframe { margin: auto; }
@@ -16,6 +16,7 @@ a:active, a:hover { outline: 0px; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
@@ -24,7 +25,7 @@ body.typora-export { padding-left: 30px; padding-right: 30px; }
 }
 #write li > figure:last-child { margin-bottom: 0.5rem; }
 #write ol, #write ul { position: relative; }
-img { max-width: 100%; vertical-align: middle; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
 button, input, select, textarea { color: inherit; font: inherit; }
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
@@ -47,7 +48,7 @@ sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); 
 sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
 #write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
 figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
-figure > table { margin: 0px !important; }
+figure > table { margin: 0px; }
 tr { break-inside: avoid; break-after: auto; }
 thead { display: table-header-group; }
 table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
@@ -86,8 +87,9 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
 }
 .footnote-line { margin-top: 0.714em; font-size: 0.7em; }
 a img, img a { cursor: pointer; }
@@ -152,6 +154,10 @@ svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+  .typora-export h1::after, .typora-export h2::after, .typora-export h3::after, .typora-export h4::after, .typora-export h5::after, .typora-export h6::after { content: ""; display: block; height: 100px; margin-bottom: -100px; }
+}
 
 
 :root {
@@ -1737,7 +1743,7 @@ g.stateGroup line {
 
 </style>
 </head>
-<body class='typora-export os-windows' >
-<div  id='write'  class = 'is-node'><p><font size="4"><a href="https://i.loli.net/2020/03/05/6QyCcHVmAts1L3R.png"><span>小北IT 引导页</span></a></font></p><h3><a name="十八而志" class="md-header-anchor"></a><span>十八而志</span></h3><p><span>从兜售情怀，到抱团取暖</span></p><hr /><h3><a name="free-service" class="md-header-anchor"></a><span>Free Service</span></h3><ul><li><span>小北IT官网</span></li></ul><blockquote><p><a href='https://xiaobeiit.com' target='_blank' class='url'>https://xiaobeiit.com</a></p><p><a href='https://xiaobeiit.cn' target='_blank' class='url'>https://xiaobeiit.cn</a></p></blockquote><ul><li><span>灰度网页版</span></li></ul><blockquote><p><a href='https://xiaobeiit.gitee.io' target='_blank' class='url'>https://xiaobeiit.gitee.io</a></p><p><a href='https://xiaobeiit.gitee.io/web' target='_blank' class='url'>https://xiaobeiit.gitee.io/web</a></p></blockquote><ul><li><span>灰度下载/更新</span></li></ul><blockquote><p><a href='https://xiaobeiit.gitee.io/update' target='_blank' class='url'>https://xiaobeiit.gitee.io/update</a></p></blockquote><hr /><h3><a name="our-group" class="md-header-anchor"></a><span>Our Group</span></h3><p><span>付款后带截图找我领取</span><a href='https://xiaobeiit.gitee.io/i/guide/code.html'><span>小北IT专属码</span></a><span>，即可进付费群</span></p><p><span>QQ1653131174，微信liyizhuang0608</span></p><p><span>以下为小北IT各个群聊的介绍：</span></p><ul><li><span>小北IT概念版</span></li></ul><blockquote><p><span>所有人均可免费加入</span></p><p><span>提供灰度及项目更新情况</span></p><p><span>群号419813381</span></p></blockquote><ul><li><span>小北IT大本营</span></li></ul><blockquote><p><span>所有人均可免费加入</span></p><p><span>提供查券领券机器人</span></p><p><span>更多内容详见“</span><a href='https://xiaobeiit.gitee.io/huidu/android/lhb.html'><span>领红包</span></a><span>”</span></p></blockquote><ul><li><span>小北IT怀旧版</span></li></ul><blockquote><p><span>带新手逆向破解</span></p><p><span>仅对领航版用户提供</span></p></blockquote><ul><li><span>小北IT灵动版</span></li></ul><blockquote><p><span>入群费15元/人，可获得灵动版专属码</span></p></blockquote><ul><li><span>小北IT清简版</span></li></ul><blockquote><p><span>入群费35元/人，可获得清简版专属码</span></p><p><span>入群即送“小北IT灵动版”专属码</span></p><p><span>若先前已加入灵动版，补价差至35元即可</span></p><p><span>QQ机器人，含气泡、秒赞、萌宠等功能</span></p><p><span>独家提供小壮壮全系列电子版书稿</span></p></blockquote><ul><li><span>小北IT领航版</span></li></ul><blockquote><p><span>完成“</span><a href='https://xiaobeiit.gitee.io/i/guide/srrz.html'><span>小北IT实人认证</span></a><span>”后即可加入</span></p><p><span>送一年时长的</span><a href='https://xiaobeiit.gitee.io/i/guide/yueka.html'><span>小北IT月卡</span></a><span>（2020全年）</span></p><p><span>灰度项目扩展资源</span></p><p><span>小北IT独家系列教程</span></p></blockquote><hr /><h3><a name="more-document" class="md-header-anchor"></a><span>More Document</span></h3><ul><li><a href='https://xiaobeiit.gitee.io/huidu/android/manual.html'><span>灰度使用教程</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/i/guide/code.html'><span>小北IT专属码</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/i/guide/hyd.html'><span>小北IT活跃度</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/i/guide/yueka.html'><span>月卡/灰度年卡</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/huidu/android/zyh.html'><span>写给灰度用户</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/huidu/android/nnxw.html'><span>特别鸣谢名单</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/huidu/android/yonghushouze.html'><span>灰度用户守则</span></a></li></ul><hr /><h3><a name="about-me" class="md-header-anchor"></a><span>About Me</span></h3><p><span>其实回忆一下前两年就能看出来，自己变了什么，谁影响了自己。</span></p><p><span>二零一七年，我下定决心要写一本书，书名就叫《我》。我写了，虽然前半本惨不忍睹。</span></p><p><span>直至现在，推翻重来，原来的手稿交由姐姐保管。</span></p><p><span>写书的过程，我想过很多事，也改变了很多。</span></p><p><span>你们所认为的我与众不同的地方，基本都来自写书的过程，还有书稿的影响。</span></p><p><span>回顾来时的路，每一步都是分岔路。</span></p><p><span>不知错过了哪些风景，我们才来到这里。只知道，因为遇见某个人，某件事，我们的命运从此改变，使我们成为今天的我们。</span></p><p><span>在搭建小北IT的这段过程中，我一直试图改变的，不是网络社交的杂乱，而是旧日的自己。</span></p><p><span>他们说，打败的力量，是迫切改变自己的内驱力。</span></p><p><span>小北IT为你打开了一条秘密通道，你可以在这里说出你的故事，无论大小，每一个我都会认真看过。</span></p><p><span>有些事，说出来的那一刻，就是改变的开始。回顾来时的路，每一步踏下去，都像春天的种子，生了根，发了芽。</span></p><hr /><center>小壮壮/Write</center></div>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h3><a name="welcome" class="md-header-anchor"></a><span>Welcome</span></h3><p><span>很高兴你加入了小北IT的大家庭。也许你不清楚该怎样做，不过这没关系，这封信将引导你融入我们，帮助你提升自我。</span></p><p><span>俗话说得好，磨刀不误砍柴工。</span></p><hr /><p><span>用户群聊&amp;权益相关文档：</span><a href='https://bbs.xiaobeiit.com/81.html'><span>小北IT入坑指南</span></a></p><p><span>灰度使用教程：</span><a href='https://xiaobeiit.gitee.io/huidu/android/manual.html'><span>戳我查看</span></a></p><p><span>ChaTi使用教程：</span><a href='https://bbs.xiaobeiit.com/30.html'><span>戳我查看</span></a></p><p><span>Creator使用教程：</span><a href='https://bbs.xiaobeiit.com/47.html'><span>戳我查看</span></a></p><hr /><h3><a name="exclusive-code" class="md-header-anchor"></a><span>Exclusive Code</span></h3><p><a href='https://xiaobeiit.gitee.io/i/guide/code.html'><span>专属码</span></a><span>（点击查看详情）是灵动版、清简版专有的，作为用户的入群（支付）凭证（就好比学生的学号、公民的身份证号），记录了用户的QQ号、昵称、专属码、入群费用、实人认证信息（认证类型、姓名、性别、手机号）（仅限领航版）。</span></p><p><span>对于领航版用户，如果QQ登不上了，但支付宝绑定的手机号没有换，可以在支付宝上确认身份，换Q加群。</span></p><hr /><h3><a name="open-source-project" class="md-header-anchor"></a><span>Open Source Project</span></h3><p><span>如果你有意愿参与开发/测试工作，可以进群交流。</span></p><p><span>小北IT所有的资源，都是100%开源的，因为外边那些东西太垃圾了。</span></p><p><span>另外，我们提供了大量的API接口：</span></p><p><a href='https://bbs.xiaobeiit.com/58.html'><span>Api接口-调用文档</span></a></p><hr /><h3><a name="more-document" class="md-header-anchor"></a><span>More Document</span></h3><ul><li><a href='https://xiaobeiit.gitee.io/i/guide/code.html'><span>小北IT专属码</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/i/guide/hyd.html'><span>小北IT活跃度</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/i/guide/yueka.html'><span>月卡/灰度年卡</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/huidu/android/zyh.html'><span>写给灰度用户</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/huidu/android/nnxw.html'><span>特别鸣谢名单</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/huidu/android/yonghushouze.html'><span>灰度用户守则</span></a></li></ul><ul><li><a href='https://xiaobeiit.gitee.io/i/guide/srrz.html'><span>实人认证流程</span></a></li></ul><hr /><h3><a name="contact-information" class="md-header-anchor"></a><span>Contact Information</span></h3><p><span>QQ号码：1653131174</span></p><p><span>备用QQ：213797368</span></p><hr /><center>小壮壮/Write</center></div>
 </body>
 </html>
