@@ -16,6 +16,7 @@ a:active, a:hover { outline: 0px; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
 .typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
 @media screen and (max-width: 500px) {
   body.typora-export { padding-left: 0px; padding-right: 0px; }
   #write { padding-left: 20px; padding-right: 20px; }
@@ -86,7 +87,7 @@ blockquote > :first-child, li > :first-child { margin-top: 0px; }
   #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
   .typora-export * { -webkit-print-color-adjust: exact; }
   html.blink-to-pdf { font-size: 13px; }
-  .typora-export #write { padding-left: 32px; padding-right: 32px; padding-bottom: 0px; break-after: avoid; }
+  .typora-export #write { break-after: avoid; }
   .typora-export #write::after { height: 0px; }
   .is-mac table { break-inside: avoid; }
 }
@@ -153,6 +154,10 @@ svg[id^="mermaidChart"] { line-height: 1em; }
 mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
 .md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
 mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+  .typora-export h1::after, .typora-export h2::after, .typora-export h3::after, .typora-export h4::after, .typora-export h5::after, .typora-export h6::after { content: ""; display: block; height: 100px; margin-bottom: -100px; }
+}
 
 
 :root {
@@ -1738,29 +1743,7 @@ g.stateGroup line {
 
 </style>
 </head>
-<body class='typora-export os-windows' >
-<div  id='write'  class = ''><h3><a name="特别鸣谢" class="md-header-anchor"></a><span>特别鸣谢</span></h3><p><em><font color=#FCFCED><span>为</span></font><font color=#F9F9DB><span>灰</span></font><font color=#F6F6C9><span>度</span></font><font color=#F3F3B7><span>开</span></font><font color=#F0F0A5><span>发</span></font><font color=#EDED93><span>提</span></font><font color=#EAEA81><span>供</span></font><font color=#E7E76F><span>重</span></font><font color=#E4E45D><span>要</span></font><font color=#E1E14B><span>帮</span></font><font color=#DEDE39><span>助</span></font><font color=#DBDB27><span>的</span></font><font color=#D8D815><span>用</span></font><font color=#D5D503><span>户</span></font></em></p><h6><a name="浅草莫言林少" class="md-header-anchor"></a><span>浅草、莫言、林少</span></h6><p><span>为iApp版灰度提供了大量核心代码</span></p><h6><a name="蓝蜥蜴杀死喜欢" class="md-header-anchor"></a><span>蓝蜥蜴、杀死喜欢</span></h6><p><span>评测灰度界面自适应效果</span></p><h6><a name="涛之雨" class="md-header-anchor"></a><span>涛之雨</span></h6><p><span>优化网页版“影视迷”源码</span></p><h6><a name="小饼干" class="md-header-anchor"></a><span>小饼干</span></h6><p><span>“</span><a href='https://xiaobeiit.gitee.io/src/huidu/android/QHB.png'><span>敲黑板</span></a><span>”出镜人（头顶纸盒子的小姐姐）</span></p><h6><a name="论坛尼斯湖" class="md-header-anchor"></a><span>论坛尼斯湖</span></h6><p><span>为Java版灰度提供部分源码</span></p><hr /><p><em><font color=#ED69FC><span>为</span></font><font color=#DB6CF9><span>小</span></font><font color=#C96FF6><span>北 </span></font><font color=#B772F3><span>I</span></font><font color=#A575F0><span>T</span></font><font color=#9378ED><span>提</span></font><font color=#817BEA><span>供</span></font><font color=#6F7EE7><span>资</span></font><font color=#5D81E4><span>金</span></font><font color=#4B84E1><span>支</span></font><font color=#3987DE><span>持</span></font><font color=#278ADB><span>的</span></font><font color=#158DD8><span>用</span></font><font color=#0390D5><span>户</span></font></em></p><p><span>2019.12.03-小尘-10元</span>
-<span>2019.12.14-我是可乐-5元</span>
-<span>2019.12.22-西北一枝花-10元</span>
-<span>2020.01.17-我的心事-4元</span>
-<span>2020.01.23-沁年-300元</span>
-<span>2020.01.23-眼睛里的星星-6.6元</span>
-<span>2020.01.23-魏无羡-6元</span>
-<span>2020.01.23-臭弟弟-2元</span>
-<span>2020.01.29-豆-1元</span>
-<span>2020.01.29-小永-8.8元</span>
-<span>2020.01.29-星海-10元</span>
-<span>2020.01.29-KT猫-50元</span>
-<span>2020.02.22-浅草-9.35元</span>
-<span>2020.03.03-晓楠-8.88元</span>
-<span>2020.03.05-小尘-200元</span>
-<span>2020.05.04-La fe°-1.88元</span>
-<span>2020.05.06-La fe°-0.4元</span>
-<span>2020.05.17-La fe°-10元</span>
-<span>2020.05.31-小北IT用户-1元</span>
-<span>2020.7.8-瘦瘦的肥肥-5元</span>
-<span>2020.8.24-晓楠-6.66元</span>
-<span>2020.8.25-La fe°-2元</span>
-<span>2020.8.28-森-1.88元</span></p><p><span>注：于2019年12月开始统计。</span></p><hr /><h4><a name="font-colorfcfcf5-font写在最后" class="md-header-anchor"></a><font color=#FCFCF5><span> </span></font><span>写在最后</span></h4><p><span>灰度的忠实粉丝也好，提出过多少建议也好，在此表示真心的感谢。</span></p><p><span>但毕竟“建议”区别于实质性的“帮助”，提出建议和反馈，更多的是为了满足需求、优化用户体验。</span></p><p><span>仅凭这一点就在这里“特别鸣谢”的话，抱歉，我做不到。</span></p><hr /><center>小壮壮/Write</center></div>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h3><a name="特别鸣谢" class="md-header-anchor"></a><span>特别鸣谢</span></h3><p><em><font color=#FCFCED><span>为</span></font><font color=#F9F9DB><span>灰</span></font><font color=#F6F6C9><span>度</span></font><font color=#F3F3B7><span>开</span></font><font color=#F0F0A5><span>发</span></font><font color=#EDED93><span>提</span></font><font color=#EAEA81><span>供</span></font><font color=#E7E76F><span>重</span></font><font color=#E4E45D><span>要</span></font><font color=#E1E14B><span>帮</span></font><font color=#DEDE39><span>助</span></font><font color=#DBDB27><span>的</span></font><font color=#D8D815><span>用</span></font><font color=#D5D503><span>户</span></font></em></p><p><a href='https://bbs.xiaobeiit.com/42.html'><span>戳我查看</span></a></p><hr /><p><em><font color=#ED69FC><span>为</span></font><font color=#DB6CF9><span>小</span></font><font color=#C96FF6><span>北 </span></font><font color=#B772F3><span>I</span></font><font color=#A575F0><span>T</span></font><font color=#9378ED><span>提</span></font><font color=#817BEA><span>供</span></font><font color=#6F7EE7><span>资</span></font><font color=#5D81E4><span>金</span></font><font color=#4B84E1><span>支</span></font><font color=#3987DE><span>持</span></font><font color=#278ADB><span>的</span></font><font color=#158DD8><span>用</span></font><font color=#0390D5><span>户</span></font></em></p><p><a href='https://bbs.xiaobeiit.com/42.html'><span>戳我查看</span></a></p><hr /><h4><a name="font-colorfcfcf5-font写在最后" class="md-header-anchor"></a><font color=#FCFCF5><span> </span></font><span>写在最后</span></h4><p><span>忠实粉丝也好，提出过多少建议也好，在此表示真心的感谢。</span></p><p><span>但毕竟“建议”区别于实质性的“帮助”，提出建议和反馈，更多的是为了满足需求、优化用户体验。</span></p><p><span>仅凭这一点就在这里“特别鸣谢”的话，抱歉，我做不到。</span></p><hr /><center>小壮壮/Write</center></div>
 </body>
 </html>
