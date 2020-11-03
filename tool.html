@@ -257,13 +257,13 @@
                         var ac = result.data[2].a;
                         var qd = result.data[3].q;
                         var ad = result.data[3].a;
-                        if (ca.equals("200") && flag.value.length>3 && qa.contains(flag.value.substring(0,3))) {
+                        if (ca.equals("200") && flag.value.length()>3 && qa.contains(flag.value.substring(0,3))) {
                         	var endStr = qa + "\n" + "\n" + aa;
-                        } else if (cb.equals("200") && flag.value.length>3 && qb.contains(flag.value.substring(0,3))) {
+                        } else if (cb.equals("200") && flag.value.length()>3 && qb.contains(flag.value.substring(0,3))) {
                         	var endStr = qb + "\n" + "\n" + ab;
-                        } else if (cc.equals("200") && flag.value.length>3 && qc.contains(flag.value.substring(0,3))) {
+                        } else if (cc.equals("200") && flag.value.length()>3 && qc.contains(flag.value.substring(0,3))) {
                         	var endStr = qc + "\n" + "\n" + ac;
-                        } else if (cd.equals("200") && flag.value.length>3 && qd.contains(flag.value.substring(0,3))) {
+                        } else if (cd.equals("200") && flag.value.length()>3 && qd.contains(flag.value.substring(0,3))) {
                         	var endStr = qd + "\n" + "\n" + ad;
                         } else if (ca.equals("200")) {
                             var endStr = qa + "\n" + "\n" + aa;
