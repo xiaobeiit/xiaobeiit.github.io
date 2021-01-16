@@ -11,14 +11,14 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="css/huidujuhe.css" media="screen" type="text/css" />
     <script>
-		var _hmt = _hmt || [];
-		(function() {
-		  var hm = document.createElement("script");
-		  hm.src = "https://hm.baidu.com/hm.js?db298c6a541022a0d0586d551fb21a2b";
-		  var s = document.getElementsByTagName("script")[0]; 
-		  s.parentNode.insertBefore(hm, s);
-		})();
-	</script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?db298c6a541022a0d0586d551fb21a2b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 
 <body>
@@ -48,18 +48,19 @@
             <div class='btn dark center' onclick='jkc()'>Line C</div>
         </div>
         <div>
-            <textarea class="textarea" placeholder="小北IT用户群：419813381；ChaTi交流群：1131838269；开发者QQ1653131174。" rows="11"></textarea>
+            <textarea class="textarea" placeholder="小北IT用户群：419813381；ChaTi交流群：1131838269；开发者QQ1653131174。"
+                rows="11"></textarea>
         </div>
     </div>
     <div style="text-align:center;clear:both">
         <script type="text/javascript">
             var flag = document.getElementById('text');
             var browser = {
-                versions: function() {
+                versions: function () {
                     var u = navigator.userAgent,
                         app = navigator.appVersion;
                     return {
-                        mobile: !! u.match(/AppleWebKit.*Mobile.*/)
+                        mobile: !!u.match(/AppleWebKit.*Mobile.*/)
                     };
                 }(),
                 language: (navigator.browserLanguage || navigator.language).toLowerCase()
@@ -117,7 +118,7 @@
                 var suoUrl = "https://xiaobeiit.cn/api/ys.php?url=" + flag.value;
                 ajaxObj.open('get', suoUrl);
                 ajaxObj.send();
-                ajaxObj.onreadystatechange = function() {
+                ajaxObj.onreadystatechange = function () {
                     if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
                         document.querySelector('textarea').innerHTML = ajaxObj.responseText;
                     }
@@ -130,7 +131,7 @@
                 var suoUrl = "https://xiaobeiit.cn/lanzou/?url=" + dwurl;
                 ajaxObj.open('get', suoUrl);
                 ajaxObj.send();
-                ajaxObj.onreadystatechange = function() {
+                ajaxObj.onreadystatechange = function () {
                     if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
                         var result = JSON.parse(ajaxObj.responseText);
                         var nameStr = result.text.name;
@@ -149,7 +150,7 @@
                 var kuaiUrl = "https://api.vvhan.com/api/kuaidi?hao=" + flag.value;
                 ajaxObj.open('get', kuaiUrl);
                 ajaxObj.send();
-                ajaxObj.onreadystatechange = function() {
+                ajaxObj.onreadystatechange = function () {
                     if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
                         var result = JSON.parse(ajaxObj.responseText);
                         var gsStr = result.company;
@@ -167,7 +168,7 @@
                 var lajiUrl = "https://xiaobeiit.cn/api/lj.php?q=" + flag.value;
                 ajaxObj.open('get', lajiUrl);
                 ajaxObj.send();
-                ajaxObj.onreadystatechange = function() {
+                ajaxObj.onreadystatechange = function () {
                     if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
                         var result = JSON.parse(ajaxObj.responseText);
                         var flStr = result.data.waste_type;
@@ -182,7 +183,7 @@
                 var miguUrl = "https://xiaobeiit.cn/api/migusc.php?key=" + flag.value;
                 ajaxObj.open('get', miguUrl);
                 ajaxObj.send();
-                ajaxObj.onreadystatechange = function() {
+                ajaxObj.onreadystatechange = function () {
                     if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
                         var result = JSON.parse(ajaxObj.responseText);
                         var id = result.data.list[0].id;
@@ -194,7 +195,7 @@
                         var mfUrl = "https://xiaobeiit.cn/api/migudw.php?id=" + id;
                         ajaxObk.open('get', mfUrl);
                         ajaxObk.send();
-                        ajaxObk.onreadystatechange = function() {
+                        ajaxObk.onreadystatechange = function () {
                             if (ajaxObk.readyState == 4 && ajaxObk.status == 200) {
                                 var res = JSON.parse(ajaxObk.responseText);
                                 var dwUrl = res.data.url;
@@ -210,7 +211,7 @@
                 var qieUrl = "https://xiaobeiit.cn/api/qiesc.php?key=" + flag.value;
                 ajaxObj.open('get', qieUrl);
                 ajaxObj.send();
-                ajaxObj.onreadystatechange = function() {
+                ajaxObj.onreadystatechange = function () {
                     if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
                         var result = JSON.parse(ajaxObj.responseText);
                         var id = result.data.list[0].songmid;
@@ -222,7 +223,7 @@
                         var qfUrl = "https://xiaobeiit.cn/api/qiedw.php?id=" + id + "&type=flac";
                         ajaxObk.open('get', qfUrl);
                         ajaxObk.send();
-                        ajaxObk.onreadystatechange = function() {
+                        ajaxObk.onreadystatechange = function () {
                             if (ajaxObk.readyState == 4 && ajaxObk.status == 200) {
                                 var res = JSON.parse(ajaxObk.responseText);
                                 var dwUrl = res.data;
@@ -242,7 +243,7 @@
                 var stUrl = "https://xiaobeiit.cn/wk/?q=" + flag.value;
                 ajaxObj.open('get', stUrl);
                 ajaxObj.send();
-                ajaxObj.onreadystatechange = function() {
+                ajaxObj.onreadystatechange = function () {
                     if (ajaxObj.readyState == 4 && ajaxObj.status == 200) {
                         var result = JSON.parse(ajaxObj.responseText);
                         var ca = result.data[0].code;
@@ -257,19 +258,19 @@
                         var ac = result.data[2].a;
                         var qd = result.data[3].q;
                         var ad = result.data[3].a;
-                        if (ca="200" && flag.value.length>3 && qa.indexOf(flag.value.substring(0,3)) > 0) {
-                        	var endStr = qa + "\n" + "\n" + aa;
-                        } else if (cb="200" && flag.value.length>3 && qb.indexOf(flag.value.substring(0,3)) > 0) {
-                        	var endStr = qb + "\n" + "\n" + ab;
-                        } else if (cc="200" && flag.value.length>3 && qc.indexOf(flag.value.substring(0,3)) > 0) {
-                        	var endStr = qc + "\n" + "\n" + ac;
-                        } else if (cd="200" && flag.value.length>3 && qd.indexOf(flag.value.substring(0,3)) > 0) {
-                        	var endStr = qd + "\n" + "\n" + ad;
-                        } else if (ca="200") {
+                        if (ca = "200" && flag.value.length > 3 && qa.indexOf(flag.value.substring(0, 3)) > 0) {
                             var endStr = qa + "\n" + "\n" + aa;
-                        } else if (cb="200") {
+                        } else if (cb = "200" && flag.value.length > 3 && qb.indexOf(flag.value.substring(0, 3)) > 0) {
                             var endStr = qb + "\n" + "\n" + ab;
-                        } else if (cc="200") {
+                        } else if (cc = "200" && flag.value.length > 3 && qc.indexOf(flag.value.substring(0, 3)) > 0) {
+                            var endStr = qc + "\n" + "\n" + ac;
+                        } else if (cd = "200" && flag.value.length > 3 && qd.indexOf(flag.value.substring(0, 3)) > 0) {
+                            var endStr = qd + "\n" + "\n" + ad;
+                        } else if (ca = "200") {
+                            var endStr = qa + "\n" + "\n" + aa;
+                        } else if (cb = "200") {
+                            var endStr = qb + "\n" + "\n" + ab;
+                        } else if (cc = "200") {
                             var endStr = qc + "\n" + "\n" + ac;
                         } else {
                             var endStr = qd + "\n" + "\n" + ad;

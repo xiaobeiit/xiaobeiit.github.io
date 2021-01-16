@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
@@ -10,14 +11,14 @@
     <link rel="stylesheet" type="text/css" href="css/iconfont.css">
     <link rel="stylesheet" type="text/css" href="css/darkstyle.css">
     <script>
-		var _hmt = _hmt || [];
-		(function() {
-		  var hm = document.createElement("script");
-		  hm.src = "https://hm.baidu.com/hm.js?db298c6a541022a0d0586d551fb21a2b";
-		  var s = document.getElementsByTagName("script")[0]; 
-		  s.parentNode.insertBefore(hm, s);
-		})();
-	</script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?db298c6a541022a0d0586d551fb21a2b";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
 </head>
 
 <body>
@@ -27,10 +28,12 @@
                 <p>灰度网页版</p>
             </div>
             <nav class="nav">
-                <div class="item active"><a href=""><i class="iconfont icon-daohang2"></i>灰度开源项目</a><i class="line"></i></div>
+                <div class="item active"><a href=""><i class="iconfont icon-daohang2"></i>灰度开源项目</a><i class="line"></i>
+                </div>
                 <ul class="nav-item" id="navItem">
                     <li><a href="#tools" class="active"><i class="iconfont icon-tool"></i>灰度项目</a></li>
-                    <li class="download"><a href="https://github.com/huidu666/huidu666.github.io"><i class="iconfont icon-github"></i>源码下载</a></li>
+                    <li class="download"><a href="https://github.com/huidu666/huidu666.github.io"><i
+                                class="iconfont icon-github"></i>源码下载</a></li>
                 </ul>
             </nav>
         </aside>
@@ -213,7 +216,7 @@
                     var oNavItem = document.getElementById('navItem');
                     var aA = oNavItem.getElementsByTagName('a');
                     for (var i = 0; i < aA.length; i++) {
-                        aA[i].onclick = function() {
+                        aA[i].onclick = function () {
                             for (var j = 0; j < aA.length; j++) {
                                 aA[j].className = '';
                             }
