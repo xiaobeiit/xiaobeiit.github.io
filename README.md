@@ -2,7 +2,9 @@
 
 https://xiaobeiit.gitee.io/update
 
-小北IT领航版提供灰度Pro。
+ChaTi软件下载地址：
+
+https://xiaobeiit.gitee.io/chati
 
 ---
 
