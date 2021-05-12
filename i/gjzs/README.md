@@ -10,11 +10,11 @@
 
 **Github项目**
 
-https://github.com/xiaobeiit/xiaobeiit.github.io/i/gjzs
+https://github.com/xiaobeiit/xiaobeiit.github.io/tree/master/i/gjzs
 
 **Gitee项目**
 
-https://gitee.com/xiaobeiit/xiaobeiit/i/gjzs
+https://gitee.com/xiaobeiit/xiaobeiit/tree/master/i/gjzs
 
 ------
 
