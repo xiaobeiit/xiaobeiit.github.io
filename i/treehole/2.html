@@ -1,0 +1,618 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>树洞002</title><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --bg-color:  #f5f5f5;
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+/* @include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext); */
+
+/*字体*/
+
+/* cyrillic-ext */
+  /* cyrillic */
+    /* greek-ext */
+    /* greek */
+    /* vietnamese */
+    /* latin-ext */
+    /* latin */
+    /* cyrillic-ext */
+    /* cyrillic */
+    /* greek-ext */
+    /* greek */
+    /* vietnamese */
+    /* latin-ext */
+    /* latin */
+    /* cyrillic-ext */
+    /* cyrillic */
+    /* greek-ext */
+    /* greek */
+    /* vietnamese */
+    /* latin-ext */
+    /* latin */
+    /* cyrillic-ext */
+    /* cyrillic */
+    /* greek-ext */
+    /* greek */
+    /* vietnamese */
+    /* latin-ext */
+    /* latin */
+  /*字体
+
+https://gstatic.loli.net/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Udc1UAw.woff2
+https://gstatic.loli.net/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0ddc1UAw.woff2
+https://gstatic.loli.net/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Vdc1UAw.woff2
+https://gstatic.loli.net/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0adc1UAw.woff2
+https://gstatic.loli.net/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Wdc1UAw.woff2
+https://gstatic.loli.net/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Xdc1UAw.woff2
+https://gstatic.loli.net/s/opensans/v18/mem6YaGs126MiZpBA-UFUK0Zdc0.woff2
+https://gstatic.loli.net/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhmIqOjjg.woff2
+https://gstatic.loli.net/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhvIqOjjg.woff2
+https://gstatic.loli.net/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhnIqOjjg.woff2
+https://gstatic.loli.net/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhoIqOjjg.woff2
+https://gstatic.loli.net/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhkIqOjjg.woff2
+https://gstatic.loli.net/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhlIqOjjg.woff2
+https://gstatic.loli.net/s/opensans/v18/memnYaGs126MiZpBA-UFUKWiUNhrIqM.woff2
+https://gstatic.loli.net/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bbck.woff2
+https://gstatic.loli.net/s/opensans/v18/mem8YaGs126MiZpBA-UFUZ0bbck.woff2
+https://gstatic.loli.net/s/opensans/v18/mem8YaGs126MiZpBA-UFWZ0bbck.woff2
+https://gstatic.loli.net/s/opensans/v18/mem8YaGs126MiZpBA-UFVp0bbck.woff2
+https://gstatic.loli.net/s/opensans/v18/mem8YaGs126MiZpBA-UFWp0bbck.woff2
+https://gstatic.loli.net/s/opensans/v18/mem8YaGs126MiZpBA-UFW50bbck.woff2
+https://gstatic.loli.net/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0b.woff2
+https://gstatic.loli.net/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOX-hpOqc.woff2
+https://gstatic.loli.net/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOVuhpOqc.woff2
+https://gstatic.loli.net/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXuhpOqc.woff2
+https://gstatic.loli.net/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUehpOqc.woff2
+https://gstatic.loli.net/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXehpOqc.woff2
+https://gstatic.loli.net/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXOhpOqc.woff2
+https://gstatic.loli.net/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUuhp.woff2
+
+*/
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+/* 边距 */
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 10px;
+    /* padding-bottom: 100px; */
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1.25em ;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h3><a name="树洞002" class="md-header-anchor"></a><span>树洞002</span></h3><h4><a name="前言" class="md-header-anchor"></a><span>前言</span></h4><blockquote><p><span>这不是一个多么动听的故事，甚至会引起一些人的不适。</span></p><p><span>故事讲完后，我还是那个我，不会有任何改变，也不需要任何改变。</span></p></blockquote><h4><a name="01creator" class="md-header-anchor"></a><span>01.Creator</span></h4><p><span>这是个不起眼的安卓应用，各大应用商店都搜不到，只在酷安和葫芦侠上架了。应用开发者极其不负责任，一度搁置开发工作半年之久，就连他的社交群里都鲜有人知。</span></p><p><span>而那个开发者，便是我。</span></p><p><span>知其然，那就知其所以然吧。这个软件是干嘛的？文本编辑器。你可能要问，纯纯写作不香吗？不香。</span></p><p><span>正是因为要和许先生对着干，我才开发了Creator。他们说，这叫神仙打架。</span></p><p><span>我站MT管理器这边，代表的是全体MT玩家。</span></p><p><span>这是我在酷安发的帖子：</span></p><blockquote><p><span>#</span><span>纯纯写作#本来挺好的一个软件，却见不得逆向玩家尝试破解（而且的的确确ban掉了一半功能）。朋友</span><a href='https://bbs.binmt.cc/space-uid-27452.html'><span>@涛之雨</span></a><span> （你</span><a href='https://bbs.binmt.cc/space-uid-33303.html'><span>@快乐小牛</span></a><span> 涛哥）只是把别人破解后的成品发给开发者，好心提醒纯纯能被过签名，就这、他就成了参与宣传破解？</span></p><p><span>他是在我推荐下付费购买纯纯激活码、正儿八经的正版用户，却因为转发一个文件，充当了传话筒的作用，而且是好心传话，你却说要封掉他的纯纯账号？</span></p><p><span>行，我忍你，这都ok，但是，为什么说这种话：</span></p><p><span>只有小学生破解才用手机，而且还付费给MT。</span></p><p><span>行，看看MT用户怂不怂你许晓锋。以前我敬你是纯纯写作开发者，但那是以前了。</span></p></blockquote><p><span>帖子刚发出来就被折叠了，所以酷友不知情…</span></p><p><span>这件事就转去MT论坛曝光的：</span></p><p><a href='https://bbs.binmt.cc/thread-47233-1-1.html'><span>关于纯纯写作的一点拙见</span></a></p><p><span>涛之雨，不知道也没关系：</span></p><p><a href='https://www.52pojie.cn/home.php?mod=space&amp;uid=879080&amp;do=profile&amp;from=space'><span>吾爱用户空间</span></a></p><p><span>论坛总版主，全站（管理组）排第三。</span></p><h4><a name="02用户反馈" class="md-header-anchor"></a><span>02.用户反馈</span></h4><p><span>2021.5.26，酷安用户</span><a href='https://www.coolapk.com/u/3305526'><span>@心墨竹</span></a><span>私信我，内容如下：</span></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/bc78276df51e9a8b0f45dc5d12911bb2.jpg?rw=1080&amp;rh=2400&amp;_fileSize=483085&amp;_orientation=1'><span>图太多了 点开看吧 1.jpg</span></a></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/63596be63e368b7277cead87a1f7d9b3.jpg?rw=1080&amp;rh=2400&amp;_fileSize=657694&amp;_orientation=1'><span>图太多了 点开看吧 2.jpg</span></a></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/32645f26fca56a00abc69823585f31bb.jpg?rw=1080&amp;rh=2400&amp;_fileSize=356446&amp;_orientation=1'><span>图太多了 点开看吧 3.jpg</span></a></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/e914ecfe5da93ac6d7b70e32bcc9f64d.jpg?rw=1080&amp;rh=2400&amp;_fileSize=421169&amp;_orientation=1'><span>图太多了 点开看吧 4.jpg</span></a></p><p><span>简单说就是Creator的输入框在Talkback模式下需要长摁才能激活。</span></p><p><span>加好友聊了一些，感触颇多。毕竟是第一次在网上接触盲人。嗯，你没听错，盲人也可以使用智能手机。</span></p><p><span>当天下午，我在领航版发了个群公告：</span></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/5bd8dd5ce3b8f2eb8a062851afc1bfa2.jpg?rw=1080&amp;rh=2400&amp;_fileSize=454380&amp;_orientation=1'><span>点我查看群公告</span></a></p><p><span>补充一下，这是我做的顶级用户群，付费+实名制，所以聊天氛围非常好。</span></p><h4><a name="03搞机群聊" class="md-header-anchor"></a><span>03.搞机群聊</span></h4><p><span>如果我有很多很多钱，或者我有非常多的领航版用户，那我绝对不至于把集资的事传到免费群。出于这个盲人小伙伴对玩机的热爱，我在 </span><a href='https://jq.qq.com/?_wv=1027&amp;k=qQFocxWL'><span>搞机助手-民间维护</span></a><span> 群里也说了这件事。</span></p><p><span>emm，这个群也是我的。</span><a href='https://bbs.binmt.cc/home.php?mod=space&amp;uid=6124&amp;do=profile&amp;from=space'><span>情非得已c</span></a><span> 停用原版搞机助手后，我接手维护了一份。这个交流群全是用户自发邀请玩机爱好者加入的，短短二十天，就有七百多人了。</span></p><p><span>但终究不是“亲生”的。情非得已c 玩MT论坛（他是管理员），不代表搞机助手用户玩MT，所以很多人并不认识我。</span></p><p><span>有人怕我是群做大了、要圈钱了：</span></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/1bb59bf21c529c2471a1dec5a296ff1b.jpg?rw=1080&amp;rh=2400&amp;_fileSize=450423&amp;_orientation=1'><span>点击查看搞机助手群聊截图</span></a></p><p><span>所以我被迫要来了残疾证照片。但个别人还是不相信，说起了风凉话：</span></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/75f3e261d8b3e971ec80c7cfd9323702.jpg?rw=1080&amp;rh=2400&amp;_fileSize=430727&amp;_orientation=1'><span>搞机助手群聊截图-查看前请先做好心理准备</span></a></p><p><span>Who care ? ？我把这人踢了。这点权限还是有的吧？嗯，中午他突然跑去酷安问候我：</span></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/7498d5733eba757c6c984ebc54897d38.jpg?rw=1080&amp;rh=2400&amp;_fileSize=530764&amp;_orientation=1'><span>酷安帖子截图-查看前请先做好心理准备</span></a></p><p><span>他是盲人，不是帕金森！</span></p><p><img src="http://p.ananas.chaoxing.com/star3/origin/5b46622c2a15774b507e4f45842cf05a.png?rw=1200&amp;rh=2133&amp;_fileSize=475136&amp;_orientation=1" referrerpolicy="no-referrer"></p><p><span>嗯，上边这张图一定要直接展示我才解气。</span></p><p><span>事情闹到盲人发帖码了两千字来替我澄清，甚至他把残疾证照片挂到了酷安。把一个人逼到想尽一切办法证明自己，这不是酷安用户该干的事，我一个祖安选手都直呼羡慕：</span></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/f175582e9bb5007298d9a17506845005.jpg?rw=1080&amp;rh=6977&amp;_fileSize=1223165&amp;_orientation=1'><span>学会做人再来求助吧？？？我直接好家伙</span></a></p><p><span>捐赠手机是我的主意，一切皆因我而起。一件不起眼的小事，让我秒变江湖骗子外加暴躁群主，可真奈斯。补个深夜聊天截图：</span></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/75800f37deae5449758a9ffc10d6d64e.png?rw=1080&amp;rh=3812&amp;_fileSize=2255505&amp;_orientation=1'><span>今夜我是全酷安最靓的崽</span></a></p><p><span>还遇到了我晓晴姐姐：</span></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/5ef7678fc4210d4031911e7e02d4c11e.png?rw=1080&amp;rh=3815&amp;_fileSize=2297931&amp;_orientation=1'><span>晴姐关注了我嘿嘿</span></a></p><p><span>额咳，我自带流量光环…</span></p><h4><a name="04捐赠进度" class="md-header-anchor"></a><span>04.捐赠进度</span></h4><p><span>小米商城，十点下的单子，送了个耳机。用户集资1460，我自己出了1040块钱。</span></p><p><span>集资相关事件，传送门：</span></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/642f17fc126aeefb464d174eafd6571e.png?rw=1080&amp;rh=22861&amp;_fileSize=12943355&amp;_orientation=1'><span>自述1</span></a><span> 、 </span><a href='http://p.ananas.chaoxing.com/star3/origin/8e65c52ce51af4727c59a7caae16d720.png?rw=1080&amp;rh=12286&amp;_fileSize=6670390&amp;_orientation=1'><span>自述2</span></a></p><p><span>6.17晚上买的，19号取件。妹妹帮忙录了开箱视频，已上传至群文件。酷安帖子：</span></p><p><a href='https://www.coolapk.com/feed/27862817?shareKey=MjA3MzE2YjhkYWY5NjBjZWRkMmU~&amp;shareUid=1785897&amp;shareFrom=com.coolapk.market_11.1.5.1'><span>是不是就挺突然的</span></a></p><p><span>6.20，中午寄了出去。酷安帖子：</span></p><p><a href='https://www.coolapk.com/feed/27882222?shareKey=NGE2OTVjMWNkMWE1NjBjZWRkODY~&amp;shareUid=1785897&amp;shareFrom=com.coolapk.market_11.1.5.1'><span>保价的钱属实有点贵</span></a></p><p><span>大家还可以继续赞助，捐赠记录里会把我的信息换成你们的。帮我回回血哈哈。突然没了一个月生活费，心疼加肉疼…</span></p><h4><a name="05写在最后" class="md-header-anchor"></a><span>05.写在最后</span></h4><p><span>神马值得看系列哦。</span></p><p><a href='https://www.coolapk.com/feed/27238053?shareKey=YmZkMjdiMDcxODM0NjBjZWRmNTg~&amp;shareUid=1785897&amp;shareFrom=com.coolapk.market_11.1.5.1'><span>纯纯写作拒绝优化盲人无障碍体验</span></a></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/a89980e7442968072c449222275a6ff9.png?rw=1080&amp;rh=5913&amp;_fileSize=3409154&amp;_orientation=1'><span>第一笔捐赠 来自 搞机助手-民间维护 群聊</span></a></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/b290ecd786214fb631d2598e46d4dd4e.jpg?rw=1080&amp;rh=2400&amp;_fileSize=1121797&amp;_orientation=1'><span>自称极度抠门的小伙伴赞助了一百块</span></a></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/6f181b84dc33c66c89eff4d2ed308bcd.jpg?rw=1080&amp;rh=2400&amp;_fileSize=1215256&amp;_orientation=1'><span>素不相识的朋友捐赠了两百块</span></a></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/ef4d9cdd4b1d3a6724c62e02e643bb5d.jpg?rw=1080&amp;rh=2400&amp;_fileSize=1288055&amp;_orientation=1'><span>年轻的教师姐姐也捐助了一百块</span></a></p><p><a href='http://p.ananas.chaoxing.com/star3/origin/368a0319bf3e5520c6958ad0b0d2e5cb.png?rw=1080&amp;rh=13869&amp;_fileSize=8716927&amp;_orientation=1'><span>我跟包装盒外边的薄膜杠上了</span></a></p><p><span>就这些吧，有缘再见。</span></p><hr /><ul><li><span>Article writing time</span></li></ul><blockquote><p><span>2021年6月20日14:46:02</span></p></blockquote><ul><li><span>My contact information</span></li></ul><blockquote><p><span>QQ：1653131174</span></p></blockquote><hr /><center>小壮壮/Write</center></div>
+</body>
+</html>
