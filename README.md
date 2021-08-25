@@ -1,16 +1,20 @@
-灰度开源项目即日起永久移除，有缘再会吧，告辞。
+#### Hui Du Projects
 
-ChaTi软件下载地址：
+ChaTi 下载地址：
 
-https://xiaobeiit.gitee.io/chati
+<https://xiaobeiit.gitee.io/chati>
+
+轻记 下载地址：
+
+<https://xiaobeiit.gitee.io/write>
 
 Github项目地址：
 
-https://github.com/xiaobeiit/xiaobeiit.github.io
+<https://github.com/xiaobeiit/xiaobeiit.github.io>
 
 Gitee项目地址：
 
-https://gitee.com/xiaobeiit/xiaobeiit
+<https://gitee.com/xiaobeiit/xiaobeiit>
 
 ---
 
