@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="keywords" content="小北IT,玩机,灰度,灰度开源项目,软件库,拾穗集,还你干净的世界" />
+    <meta name="description" content="灰度网页版，轻奢，极简，悦享，还你干净的世界" />
+    <title>小北IT-导航页</title>
+    <link rel="shortcut icon" href="logo.png" />
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container" id="container">
+        <aside class="left-bar" id="leftBar">
+            <div class="title">
+                <p>小北IT导航页</p>
+            </div>
+            <nav class="nav">
+                <div class="item active"><a href=""><i class="iconfont icon-daohang2"></i>导航页</a><i class="line"></i>
+                </div>
+                <ul class="nav-item" id="navItem">
+                    <li><a href="./#tools" class="active"><i class="iconfont icon-tool"></i>常用网址</a>
+                    </li>
+
+                    <li class="download"><a href="https://gitee.com/xiaobeiit/"><i
+                                class="iconfont icon-github"></i>源码下载</a></li>
+                </ul>
+                <div class="item comment"><a target="_blank" href="./about.html"><i
+                            class="iconfont icon-liuyan"></i>About</a></div>
+            </nav>
+        </aside>
+        <section class="main">
+            <div id="mainContent">
+                <!-- 手机端菜单 -->
+                <div id="menu"><a href="#">菜单</a></div>
+                <div>
+
+                    <br>
+                    <p class="leftmargin">
+                        <font size="5" face="arial" color="#CDCDCD">关于本站
+                        </font>
+                    </p><br>
+                    <p style="margin-left:5%; line-height:30px">
+                        <font size="2" face="arial" color="#CDCDCD">
+                            免去浏览器登陆账号的繁琐，走到哪里都能快速访问这些常用网站。<br>
+                            以下是本网站的声明：<br>
+                            <br><strong>
+                                本网站不提供任何形式的资源存储、下载服务。<br>
+                                本站所有内容均来自互联网，非盈利目的，仅供大家学习使用。<br>
+                                您在使用本站时出现的一切问题，本站作者概不负责。<br>
+                                本站调用到的所有链接，均为无条件下的绝对公开信息，不存在任何侵权行为。<br>
+                                本站使用开源模板，不构成盗用资源的行为。<br>
+                                如有异议，请发送邮件到admin@xiaobeiit.cn，谢谢配合！<br>
+                                <br></strong>
+                            技术的积累是漫长而枯燥的，但是将技术变为实践也许就会出现很多有趣的事。<br>
+                            <br>
+                            什么？网站做得好丑？啊？风太大我听不见。<br>
+                            小北IT官方QQ交流群：1156495521。<br>
+                            我的QQ号：213797368。<br>
+                            <br>
+                            轻奢，极简，悦享，小北IT，还你干净的世界。<br>
+                            <br>
+                            小壮壮/Write<br>
+                            2019.10.4<br>
+                        </font>
+                    </p>
+                </div>
+                <br><br>
+                <footer class="footer">
+                    <div class="copyright">
+                        <div>Copyright © 2017-2022</div>
+                    </div>
+                </footer>
+            </div>
+        </section>
+        <script>
+            var oMenu = document.getElementById('menu');
+            var oBtn = oMenu.getElementsByTagName('a')[0];
+            var oLeftBar = document.getElementById('leftBar');
+            oBtn.onclick = function () {
+                if (oLeftBar.offsetLeft == 0) {
+                    oLeftBar.style.left = -249 + 'px';
+                } else {
+                    oLeftBar.style.left = 0 + 'px';
+                }
+                if (document.documentElement.clientWidth <= 481) {
+                    document.onclick = function () {
+                        if (oLeftBar.offsetLeft == 0) {
+                            console.log(123);
+                            oLeftBar.style.left = -249 + 'px';
+                        }
+                    }
+                }
+            }
+
+            var oNavItem = document.getElementById('navItem');
+            var aA = oNavItem.getElementsByTagName('a');
+            for (var i = 0; i < aA.length; i++) {
+                aA[i].onclick = function () {
+                    for (var j = 0; j < aA.length; j++) {
+                        aA[j].className = '';
+                    }
+                    this.className = 'active';
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
