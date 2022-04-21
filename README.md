@@ -24,9 +24,9 @@ Gitee项目地址：
 
 官方反馈邮箱：
 
-- liyizhuang@xiaobeiit.com
+- admin@xiaobeiit.com
 
-- liyizhuang@xiaobeiit.cn
+- admin@xiaobeiit.cn
 
 ---
 
